@@ -1,0 +1,2250 @@
+[
+  {
+    "url": "https://www.subway.co.jp/menu/sandwich/",
+    "getQuery": "ul.productList > li",
+    "resultName": "sandwich",
+    "getOptionFlag": true,
+    "result": {
+      "limited": {
+        "id": "limited",
+        "name": "limited",
+        "output": [
+          {
+            "name": "10種野菜をはさんだタルタルシュリンプ　〜野菜ザクザク和柑橘タルタル〜",
+            "link": "/menu/sandwich/limited_sandwich/2650.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 530,
+                "carbohydrate": 42.8,
+                "kcal": 331
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "10種野菜をはさんだタルタルチキン　〜野菜ザクザク和柑橘タルタル〜",
+            "link": "/menu/sandwich/limited_sandwich/2651.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 42.8,
+                "kcal": 375
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      },
+      "sandwich": {
+        "id": "menu-sandwich",
+        "name": "sandwich",
+        "output": [
+          {
+            "name": "ローストビーフ　～プレミアム製法～",
+            "link": "/menu/sandwich/2290.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 590,
+                "carbohydrate": 35.5,
+                "kcal": 309
+              },
+              {
+                "name": "フットロング",
+                "price": null,
+                "carbohydrate": 0,
+                "kcal": 618
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "生ハム＆マスカルポーネ",
+            "link": "/menu/sandwich/2294.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 530,
+                "carbohydrate": 38.8,
+                "kcal": 326
+              },
+              {
+                "name": "フットロング",
+                "price": 960,
+                "carbohydrate": 0,
+                "kcal": 652
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "えびアボカド",
+            "link": "/menu/sandwich/2292.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 530,
+                "carbohydrate": 38,
+                "kcal": 339
+              },
+              {
+                "name": "フットロング",
+                "price": 960,
+                "carbohydrate": 0,
+                "kcal": 678
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "てり焼きチキン　〜焦がし醬油仕立て〜",
+            "link": "/menu/sandwich/2652.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 43.2,
+                "kcal": 346
+              },
+              {
+                "name": "フットロング",
+                "price": 890,
+                "carbohydrate": 0,
+                "kcal": 692
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ＢＬＴ",
+            "link": "/menu/sandwich/2291.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 39,
+                "kcal": 330
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 660
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "サラダチキン",
+            "link": "/menu/sandwich/2620.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 38.5,
+                "kcal": 278
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 556
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チーズサラダチキン",
+            "link": "/menu/sandwich/2621.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 38.5,
+                "kcal": 331
+              },
+              {
+                "name": "フットロング",
+                "price": 890,
+                "carbohydrate": 0,
+                "kcal": 662
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ツナ",
+            "link": "/menu/sandwich/2284.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 36.1,
+                "kcal": 350
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 700
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チリチキン",
+            "link": "/menu/sandwich/2279.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 37,
+                "kcal": 273
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 546
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "アボカドベジー",
+            "link": "/menu/sandwich/2287.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 41.2,
+                "kcal": 316
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 632
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "たまご",
+            "link": "/menu/sandwich/2288.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 430,
+                "carbohydrate": 37.4,
+                "kcal": 318
+              },
+              {
+                "name": "フットロング",
+                "price": 780,
+                "carbohydrate": 0,
+                "kcal": 636
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ベジーデライト",
+            "link": "/menu/sandwich/2286.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 360,
+                "carbohydrate": 35.2,
+                "kcal": 215
+              },
+              {
+                "name": "フットロング",
+                "price": 650,
+                "carbohydrate": 0,
+                "kcal": 430
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "腸活サンド チキンandチーズ",
+            "link": "/menu/sandwich/2622.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 530,
+                "carbohydrate": 39.4,
+                "kcal": 339
+              },
+              {
+                "name": "フットロング",
+                "price": 960,
+                "carbohydrate": 0,
+                "kcal": 678
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "スパイシーえびたま",
+            "link": "/menu/sandwich/2568.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 36.5,
+                "kcal": 321
+              },
+              {
+                "name": "フットロング",
+                "price": 890,
+                "carbohydrate": 0,
+                "kcal": 642
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "贅沢てりたまチキン",
+            "link": "/menu/sandwich/2653.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 590,
+                "carbohydrate": 43.3,
+                "kcal": 449
+              },
+              {
+                "name": "フットロング",
+                "price": 1070,
+                "carbohydrate": 0,
+                "kcal": 898
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "よくばりハーフ＆ハーフ（ツナ/生ハム&マスカルポーネ）",
+            "link": "/menu/sandwich/2654.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 39.1,
+                "kcal": 334
+              },
+              {
+                "name": "フットロング",
+                "price": 890,
+                "carbohydrate": 0,
+                "kcal": 668
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ピザ ベーコンイタリアーナ",
+            "link": "/menu/sandwich/2529.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 35.2,
+                "kcal": 436
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ピザ えびジェノベーゼ",
+            "link": "/menu/sandwich/2639.html",
+            "size": [
+              {
+                "name": "レギュラー",
+                "price": 490,
+                "carbohydrate": 34.8,
+                "kcal": 412
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      },
+      "party": {
+        "status": "skip"
+      },
+      "setmenu": {
+        "id": "menu-setmenu",
+        "name": "setmenu",
+        "output": [
+          {
+            "name": "ポテトドリンクセット",
+            "size": []
+          },
+          {
+            "name": "ドリンク(S)セット",
+            "size": []
+          },
+          {
+            "name": "ポテト(S)セット",
+            "size": []
+          },
+          {
+            "name": "スープセット",
+            "size": []
+          },
+          {
+            "name": "フロートセット",
+            "size": []
+          }
+        ]
+      },
+      "sizeup": {
+        "status": "skip"
+      },
+      "bread": {
+        "id": "menu-bread",
+        "name": "bread",
+        "output": [
+          {
+            "name": "ウィート",
+            "link": "/menu/bread/2246.html",
+            "size": [
+              {
+                "name": "レギュラー180kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホワイト",
+            "link": "/menu/bread/2245.html",
+            "size": [
+              {
+                "name": "レギュラー179kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "セサミ",
+            "link": "/menu/bread/2244.html",
+            "size": [
+              {
+                "name": "レギュラー196kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ハニーオーツ",
+            "link": "/menu/bread/2243.html",
+            "size": [
+              {
+                "name": "レギュラー190kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "フラットブレッド",
+            "link": "/menu/bread/2242.html",
+            "size": [
+              {
+                "name": "レギュラー227kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      },
+      "topping": {
+        "id": "menu-topping",
+        "name": "topping",
+        "output": [
+          {
+            "name": "ナチュラルスライスチーズ",
+            "link": "/menu/topping_menu/2254.html",
+            "size": [
+              {
+                "name": "2枚",
+                "price": 50,
+                "carbohydrate": 0,
+                "kcal": 47
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "クリームタイプチーズ",
+            "link": "/menu/topping_menu/2253.html",
+            "size": [
+              {
+                "name": "20ｇ",
+                "price": 70,
+                "carbohydrate": 0,
+                "kcal": 64
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "マスカルポーネチーズ",
+            "link": "/menu/topping_menu/2252.html",
+            "size": [
+              {
+                "name": "20ｇ",
+                "price": 100,
+                "carbohydrate": 0,
+                "kcal": 51
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "たまご",
+            "link": "/menu/topping_menu/2249.html",
+            "size": [
+              {
+                "name": "1スクープ",
+                "price": 70,
+                "carbohydrate": 0,
+                "kcal": 65
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ベーコン",
+            "link": "/menu/topping_menu/2247.html",
+            "size": [
+              {
+                "name": "2枚",
+                "price": 70,
+                "carbohydrate": 0,
+                "kcal": 48
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ツナ",
+            "link": "/menu/topping_menu/2248.html",
+            "size": [
+              {
+                "name": "1スクープ",
+                "price": 70,
+                "carbohydrate": 0,
+                "kcal": 68
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "えび",
+            "link": "/menu/topping_menu/2251.html",
+            "size": [
+              {
+                "name": "5尾",
+                "price": 120,
+                "carbohydrate": 0,
+                "kcal": 16
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "アボカド",
+            "link": "/menu/topping_menu/2250.html",
+            "size": [
+              {
+                "name": "1スクープ",
+                "price": 150,
+                "carbohydrate": 0,
+                "kcal": 74
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "モッツァレラミックスチーズ",
+            "link": "/menu/topping_menu/2564.html",
+            "size": [
+              {
+                "name": "1スクープ",
+                "price": 50,
+                "carbohydrate": 0,
+                "kcal": 46
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      },
+      "vegetable": {
+        "id": "menu-vegetable",
+        "name": "vegetable",
+        "output": [
+          {
+            "name": "レタス",
+            "size": []
+          },
+          {
+            "name": "トマト",
+            "size": []
+          },
+          {
+            "name": "ピーマン",
+            "size": []
+          },
+          {
+            "name": "オニオン",
+            "size": []
+          }
+        ]
+      },
+      "free-topping": {
+        "status": "already",
+        "id": "menu-free-topping",
+        "name": "free-topping",
+        "output": [
+          {
+            "name": "オリーブ",
+            "link": "",
+            "size": []
+          },
+          {
+            "name": "ピクルス",
+            "link": "",
+            "size": {
+              "$ref": "$[0].result.free-topping.output[0].size"
+            }
+          },
+          {
+            "name": "ホットペッパー",
+            "link": "",
+            "size": {
+              "$ref": "$[0].result.free-topping.output[0].size"
+            }
+          }
+        ]
+      },
+      "sauce": {
+        "id": "menu-sauce",
+        "name": "sauce",
+        "output": [
+          {
+            "name": "オイル&ビネガー　塩・こしょう",
+            "link": "/menu/sauce/2263.html",
+            "size": [
+              {
+                "name": "24kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "シーザードレッシング",
+            "link": "/menu/sauce/2261.html",
+            "size": [
+              {
+                "name": "39kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "野菜クリーミードレッシング",
+            "link": "/menu/sauce/2256.html",
+            "size": [
+              {
+                "name": "35kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "まろやかレモンドレッシング",
+            "link": "/menu/sauce/2625.html",
+            "size": [
+              {
+                "name": "11kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "わさび醤油ソース",
+            "link": "/menu/sauce/2260.html",
+            "size": [
+              {
+                "name": "6kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "バジルソース",
+            "link": "/menu/sauce/2262.html",
+            "size": [
+              {
+                "name": "24kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "マヨネーズタイプ",
+            "link": "/menu/sauce/2258.html",
+            "size": [
+              {
+                "name": "16kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チリソース（激辛）",
+            "link": "/menu/sauce/2255.html",
+            "size": [
+              {
+                "name": "3kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チポトレソース",
+            "link": "/menu/sauce/2563.html",
+            "size": [
+              {
+                "name": "53kcal",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.subway.co.jp/menu/salad/",
+    "getQuery": "ul.productList > li",
+    "resultName": "salad",
+    "getOptionFlag": false,
+    "result": {
+      "salad": {
+        "id": null,
+        "name": "salad",
+        "output": [
+          {
+            "name": "ローストビーフ　～プレミアム製法～",
+            "link": "/menu/salad/2274.html",
+            "size": [
+              {
+                "name": "",
+                "price": 920,
+                "carbohydrate": 5.5,
+                "kcal": 144
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "生ハム＆マスカルポーネ",
+            "link": "/menu/salad/2278.html",
+            "size": [
+              {
+                "name": "",
+                "price": 860,
+                "carbohydrate": 6,
+                "kcal": 129
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "えびアボカド",
+            "link": "/menu/salad/2276.html",
+            "size": [
+              {
+                "name": "",
+                "price": 860,
+                "carbohydrate": 7.5,
+                "kcal": 123
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "てり焼きチキン　〜焦がし醬油仕立て〜",
+            "link": "/menu/salad/2655.html",
+            "size": [
+              {
+                "name": "",
+                "price": 820,
+                "carbohydrate": 14,
+                "kcal": 177
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ＢＬＴ",
+            "link": "/menu/salad/2275.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 6,
+                "kcal": 118
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "サラダチキン",
+            "link": "/menu/salad/2623.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 5.5,
+                "kcal": 93
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チーズサラダチキン",
+            "link": "/menu/salad/2624.html",
+            "size": [
+              {
+                "name": "",
+                "price": 820,
+                "carbohydrate": 6.1,
+                "kcal": 158
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ツナ",
+            "link": "/menu/salad/2268.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 7,
+                "kcal": 169
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チリチキン",
+            "link": "/menu/salad/2264.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 7.8,
+                "kcal": 104
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "アボカドベジー",
+            "link": "/menu/salad/2271.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 7.5,
+                "kcal": 107
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "たまご",
+            "link": "/menu/salad/2272.html",
+            "size": [
+              {
+                "name": "",
+                "price": 760,
+                "carbohydrate": 7.8,
+                "kcal": 163
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ベジーデライト",
+            "link": "/menu/salad/2270.html",
+            "size": [
+              {
+                "name": "",
+                "price": 690,
+                "carbohydrate": 5.5,
+                "kcal": 33
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "腸活サンド チキンandチーズ",
+            "link": "/menu/salad/2658.html",
+            "size": [
+              {
+                "name": "",
+                "price": 860,
+                "carbohydrate": 5.7,
+                "kcal": 146
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "スパイシーえびたま",
+            "link": "/menu/salad/2565.html",
+            "size": [
+              {
+                "name": "",
+                "price": 820,
+                "carbohydrate": 7,
+                "kcal": 113
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "贅沢てりたまチキン",
+            "link": "/menu/salad/2656.html",
+            "size": [
+              {
+                "name": "",
+                "price": 920,
+                "carbohydrate": 14.3,
+                "kcal": 295
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "よくばりハーフ＆ハーフ（ツナ/生ハム&マスカルポーネ）",
+            "link": "/menu/salad/2657.html",
+            "size": [
+              {
+                "name": "",
+                "price": 820,
+                "carbohydrate": 9.3,
+                "kcal": 165
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.subway.co.jp/menu/sidemenu/",
+    "getQuery": "ul.productList > li",
+    "resultName": "sidemenu",
+    "getOptionFlag": false,
+    "result": {
+      "sidemenu": {
+        "id": null,
+        "name": "sidemenu",
+        "output": [
+          {
+            "name": "オリジナル",
+            "link": "/menu/sidemenu/potatoes/2185.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 210,
+                "carbohydrate": 0,
+                "kcal": 158
+              },
+              {
+                "name": "（M）",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 280
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "トリプルチーズ",
+            "link": "/menu/sidemenu/potatoes/2184.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 210,
+                "carbohydrate": 0,
+                "kcal": 164
+              },
+              {
+                "name": "（M）",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 293
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ハーブソルト",
+            "link": "/menu/sidemenu/potatoes/2182.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 210,
+                "carbohydrate": 0,
+                "kcal": 161
+              },
+              {
+                "name": "（M）",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 287
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "高原トマトと6種野菜のミネストローネ",
+            "link": "/menu/sidemenu/soup/2186.html",
+            "size": [
+              {
+                "name": "",
+                "price": 370,
+                "carbohydrate": 0,
+                "kcal": 80
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "コーンクリームチャウダー",
+            "link": "/menu/sidemenu/soup/2190.html",
+            "size": [
+              {
+                "name": "",
+                "price": 370,
+                "carbohydrate": 0,
+                "kcal": 115
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チョコブラウニー",
+            "link": "/menu/sidemenu/sweets/2450.html",
+            "size": [
+              {
+                "name": "",
+                "price": 200,
+                "carbohydrate": 0,
+                "kcal": 143
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "チーズタルト",
+            "link": "/menu/sidemenu/sweets/2451.html",
+            "size": [
+              {
+                "name": "",
+                "price": 200,
+                "carbohydrate": 0,
+                "kcal": 150
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  {
+    "url": "https://www.subway.co.jp/menu/drink/",
+    "getQuery": "ul.productList > li",
+    "resultName": "drink",
+    "getOptionFlag": false,
+    "result": {
+      "drink": {
+        "id": null,
+        "name": "drink",
+        "output": [
+          {
+            "name": "アイスコーヒー",
+            "link": "/menu/drink/cold_drink/2211.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 260,
+                "carbohydrate": 0,
+                "kcal": 8
+              },
+              {
+                "name": "（M）",
+                "price": 310,
+                "carbohydrate": 0,
+                "kcal": 12
+              },
+              {
+                "name": "（L）",
+                "price": 360,
+                "carbohydrate": 0,
+                "kcal": 16
+              }
+            ]
+          },
+          {
+            "name": "アイスカフェオレ",
+            "link": "/menu/drink/cold_drink/2212.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 260,
+                "carbohydrate": 0,
+                "kcal": 76
+              },
+              {
+                "name": "（M）",
+                "price": 310,
+                "carbohydrate": 0,
+                "kcal": 108
+              },
+              {
+                "name": "（L）",
+                "price": 360,
+                "carbohydrate": 0,
+                "kcal": 133
+              }
+            ]
+          },
+          {
+            "name": "アイスココア",
+            "link": "/menu/drink/cold_drink/2221.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 198
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "アイスティー",
+            "link": "/menu/drink/cold_drink/2213.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 6
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 8
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 10
+              }
+            ]
+          },
+          {
+            "name": "アイスミルク",
+            "link": "/menu/drink/cold_drink/2216.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 142
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 203
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 265
+              }
+            ]
+          },
+          {
+            "name": "野菜と果物のジュース",
+            "link": "/menu/drink/cold_drink/2210.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 94
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 135
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 176
+              }
+            ]
+          },
+          {
+            "name": "オレンジジュース100%",
+            "link": "/menu/drink/cold_drink/2215.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 92
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 132
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 172
+              }
+            ]
+          },
+          {
+            "name": "アイスウーロン茶",
+            "link": "/menu/drink/cold_drink/2214.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 1
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 1
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 2
+              }
+            ]
+          },
+          {
+            "name": "メロンソーダ",
+            "link": "/menu/drink/cold_drink/2219.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 79
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 114
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 148
+              }
+            ]
+          },
+          {
+            "name": "ジンジャーエール",
+            "link": "/menu/drink/cold_drink/2220.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 70
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 100
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 130
+              }
+            ]
+          },
+          {
+            "name": "ペプシコーラ",
+            "link": "/menu/drink/cold_drink/2217.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 79
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 114
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 148
+              }
+            ]
+          },
+          {
+            "name": "ペプシゼロ",
+            "link": "/menu/drink/cold_drink/2218.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "（M）",
+                "price": 290,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "（L）",
+                "price": 340,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットコーヒー",
+            "link": "/menu/drink/hot_drink/2222.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 260,
+                "carbohydrate": 0,
+                "kcal": 5
+              },
+              {
+                "name": "（M）",
+                "price": 310,
+                "carbohydrate": 0,
+                "kcal": 7
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットカフェラテ",
+            "link": "/menu/drink/hot_drink/2227.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 260,
+                "carbohydrate": 0,
+                "kcal": 60
+              },
+              {
+                "name": "（M）",
+                "price": 310,
+                "carbohydrate": 0,
+                "kcal": 69
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットココア",
+            "link": "/menu/drink/hot_drink/2225.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 150
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットティー",
+            "link": "/menu/drink/hot_drink/2224.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 3
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットミルクティー",
+            "link": "/menu/drink/hot_drink/2226.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 23
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "ホットハーブティー",
+            "link": "/menu/drink/hot_drink/2223.html",
+            "size": [
+              {
+                "name": "（S）",
+                "price": 240,
+                "carbohydrate": 0,
+                "kcal": 5
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "コーヒーフロート",
+            "link": "/menu/drink/ice_cream_floats/2209.html",
+            "size": [
+              {
+                "name": "",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 93
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "カフェラテフロート",
+            "link": "/menu/drink/ice_cream_floats/2208.html",
+            "size": [
+              {
+                "name": "",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 151
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          },
+          {
+            "name": "クリームソーダ",
+            "link": "/menu/drink/ice_cream_floats/2206.html",
+            "size": [
+              {
+                "name": "",
+                "price": 300,
+                "carbohydrate": 0,
+                "kcal": 172
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              },
+              {
+                "name": "",
+                "price": 0,
+                "carbohydrate": 0,
+                "kcal": 0
+              }
+            ]
+          }
+        ]
+      }
+    }
+  }
+]

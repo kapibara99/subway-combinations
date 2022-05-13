@@ -1,9 +1,9 @@
 import { useState , useEffect } from 'react'
 
-export const Header = () => {
+export const Footer = () => {
   return (
     <footer>
-      
+
     </footer>
   )
 }

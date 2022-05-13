@@ -1,8 +1,17 @@
+// common react lib
 import { useState , useEffect } from 'react'
+import { Routes, Route } from 'react-router-dom';
+
+// page layouts
+import { Home } from "./pages/Home";
+import { Result } from "./pages/Result";
+import { NotFound } from "./pages/NotFound";
 
 //components
-import { ResultCard } from "./components/resultCard/main";
-import { Header } from "./components/Header/header";
+// import { ResultCard } from "./components/resultCard/resultCard";
+import { Header } from "./common/Header/header";
+import { Footer } from "./common/Footer/footer";
+
 
 //axios
 import axios , { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
@@ -46,12 +55,12 @@ function App() {
   return (
     <ThemeProvider theme={theme}>
       <Header />
-      <div className='main'>
-        {data.map((item:Data , index:number)=>(
-          <p key={index}>{item.url}</p>
-        ))}
-      </div>
-      <ResultCard />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/result" element={<Result />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+      <Footer />
     </ThemeProvider>
   )
 }

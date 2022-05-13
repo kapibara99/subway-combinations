@@ -34,7 +34,8 @@ const HTMLParsedJSON = (htmlText,obj) => {
   try{
     // options
     const $ = cheerio.load(htmlText);
-    obj.result = Object.assign({});
+    obj.result = [];
+    const o = Object.assign({});
 
     if(obj.getOptionFlag){//productOptionListを取得する場合
       const eleList = $('[id^="menu-"]');
@@ -47,10 +48,7 @@ const HTMLParsedJSON = (htmlText,obj) => {
           name = id;
         };
         const objName = name;
-        //if(!obj.result[objName])
-
         let resultArray = [];
-        obj.result[objName] = Object.assign({});
         resultArray = [...$(`#${id} ${obj.getQuery}`),...$(`#${id} ul.productOptionList > li`)];
 
 
@@ -59,10 +57,10 @@ const HTMLParsedJSON = (htmlText,obj) => {
         switch (objName){
           case "sizeup":
           case "party"://データに加えない子たち
-            obj.result[objName].status = "skip";
+            o.status = "skip";
             return;
           case "free-topping"://ここだけ、実データを代入している
-            obj.result[objName].status = "already";
+            o.status = "already";
             const {freeToppingList} = require("./data");
             resultArray = freeToppingList;
             // console.log(obj,resultArray);
@@ -71,20 +69,20 @@ const HTMLParsedJSON = (htmlText,obj) => {
         }
 
         if(resultArray.length){
-          obj.result[objName].ary = Array.from(new Set(resultArray));
-          obj.result[objName].id = id;
-          obj.result[objName].name = objName;
+          o.ary = Array.from(new Set(resultArray));
+          o.id = id;
+          o.name = objName;
         }
-        // console.log((obj.result[objName].ary));
-        // console.log(`result:${objName}`,obj.result[objName].ary.length,resultArray.length);
+        // console.log((o.ary));
+        // console.log(`result:${objName}`,o.ary.length,resultArray.length);
       })
 
     }else{
-      obj.result[obj.resultName] = Object.assign({});
-      obj.result[obj.resultName].ary = [].slice.call($(obj.getQuery));
-      obj.result[obj.resultName].id = null;
-      obj.result[obj.resultName].name = obj.resultName;
+      o.ary = [].slice.call($(obj.getQuery));
+      o.id = null;
+      o.name = obj.resultName;
     }
+    obj.result.push(o);
     // console.log(`result${obj.url}:`,obj.result.length);
   }catch (e){
     console.error(e)
@@ -177,10 +175,9 @@ const toJSON = (toJSONObj) => {
   //toJSONObjをjsonにして、リソースを更新する
   const result = toJSONObj.slice();
   result.forEach(page => {
-    const list = Object.keys(page.result);
-    if(!list.length) return;
-    list.forEach(key =>{
-      parseItem(page.result[key]);
+    if(!page.result.length) return;
+    page.result.forEach(item =>{
+      parseItem(item);
     })
   })
 

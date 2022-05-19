@@ -5,17 +5,35 @@
 $mainGreen : #1F8940;
 $lightGreen : #8BCD32;
 $darkGreen : #028940;
+$gray : #F0F0F0;
 $white : #FFFFFF;
 
 // accent
 $accentYellow : #FFC20D;
 
-
 // text and link
-$textColor : #454545;
-
-// others
+$text : #454545;
 $weak : #CDCDCD;
 
+
 // media query mixin
+$breakpoints: (
+  'sp': 'screen and (max-width: 599px)',
+  'sp-mini': 'screen and (max-width: 359px)',
+  'pc': 'screen and (min-width: 600px)',
+  'tablet': 'screen and (min-width: 600px) and (max-width: 1024px)',
+  'pc-wrap': 'screen and (min-width: 1024px)',
+) !default;
+
+@mixin mq($breakpoint: pc) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+
+// width col size
+$maxContentPC : 1440px;
+$maxContentSP : 450px;
+$widthWrap  : 95%;
 

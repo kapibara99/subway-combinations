@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+.c-checkList{
+  $root : &;
+  @include mq(){
+    text-align: center;
+  }
+  &__inner{
+    @include mq(){
+      display: inline-flex;
+      flex-wrap: nowrap;
+      align-items: center;
+      justify-content: center;
+    }
+    > label{
+      :last-of-type{
+        margin: 0;
+      }
+    }
+  }
+}

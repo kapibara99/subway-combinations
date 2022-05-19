@@ -1,4 +1,36 @@
 body{
+  position: relative;
   background-color: $white;
+  min-height: 100vh;
+  padding-bottom: 40px;
   color: $mainGreen;
+}
+
+main{
+  width: $widthWrap;
+  max-width: $maxContentSP;
+  margin: auto;
+  @include mq(){
+    max-width: $maxContentPC;
+  }
+}
+
+header{
+  background-color: $mainGreen;
+  min-height: 40px;
+  margin-bottom: 100px;
+  color: $white;
+  @include mq(){
+    margin-bottom: 150px;
+  }
+}
+
+footer{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: $gray;
+  width: 100%;
+  min-height: 40px;
+  color: $text;
 }

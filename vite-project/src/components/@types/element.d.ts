@@ -2,7 +2,7 @@ declare interface checkBoxType {
   key:string,
   id : string,
   label : string,
-  checked ? : boolean,
+  checked : boolean,
   onChange ? : any,
 }
 declare namespace JSX {

@@ -5,6 +5,7 @@ import { CheckBoxOrigin } from '../components/CheckBoxOrigin/CheckBoxOrigin';
 // styles
 import "../components/checkList/checkList.scss"
 
+// config
 const checkBoxLabels = [
   "セットあり",
   "サイドメニューあり",

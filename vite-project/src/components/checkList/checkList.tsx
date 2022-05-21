@@ -34,6 +34,8 @@ export const CheckList = () => {
   }
 
     return (
+      <>
+      <h2>検索オプション</h2>
       <div className="c-checkList">
         <div className="c-checkList__inner">
         {checkFlags.map((item,i)=>{
@@ -44,5 +46,6 @@ export const CheckList = () => {
         })}
         </div>
       </div>
+      </>
   )
 }

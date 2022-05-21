@@ -1,0 +1,13 @@
+@charset "UTF-8";
+
+.margin{
+  &-large{
+    margin-bottom: 80px;
+  }
+  &-middle{
+    margin-bottom: 40px;
+  }
+  &-small{
+    margin-bottom: 18px;
+  }
+}

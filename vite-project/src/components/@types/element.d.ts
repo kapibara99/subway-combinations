@@ -5,9 +5,14 @@ declare interface checkBoxType {
   checked : boolean,
   onChange ? : any,
 }
+declare interface marginSetType {
+  value : "large" | "middle" | "small" | Number;
+}
+
 declare namespace JSX {
   // JSX.Elementを定義
   interface IntrinsicElements {
-      checkBoxOrigin:checkBoxType
+      checkBoxOrigin:checkBoxType,
+      marginSet:marginSetType
   }
 }

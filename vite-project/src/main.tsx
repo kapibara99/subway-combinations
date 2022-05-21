@@ -6,8 +6,7 @@ import { BrowserRouter } from 'react-router-dom';
 
 // redux
 import {Provider} from 'react-redux';//react-reduxの機能
-import configureStore from './redux/store/store';
-const store = configureStore();
+import {store} from './redux/store/store';
 
 // render
 ReactDOM.createRoot(document.getElementById('root')!).render(

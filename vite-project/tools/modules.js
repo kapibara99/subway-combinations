@@ -137,13 +137,26 @@ const setItemInfo = (element,resultAry) => {
     const obj = Object.assign({},priceTemplate);
     const $$ = cheerio.load(el);
     const priceName = $$(".price_name").text();
-    // if(!priceName || !priceName.length)return;
+    if(!($$.text().replace("\n","").length)){//改行のみの場合は何も返さない
+      return;
+    }
 
+    //set
     obj.name = priceName;
     obj.price = Number($$(".price_yen").text().replace("￥","").replace("¥",""));
     obj.carbohydrate = Number($$(".price_carb").text().replace("g","").replace("糖質 ",""));
     obj.kcal = Number($$(".price_kcal").text().replace("kcal",""));
 
+    //もし空なら正規表現で探してみる
+    if(!obj.price){
+      obj.price = Number(String(String(el).match(/[¥¥|¥¥|¥￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+    }
+    if(!obj.carbohydrate){
+      obj.carbohydrate = Number(String(String(el).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+    }
+    if(!obj.kcal){
+      obj.kcal = Number(String(String(el).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
+    }
     temp.size.push(obj);
   })
   resultAry.push(temp);

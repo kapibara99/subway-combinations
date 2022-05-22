@@ -34,8 +34,7 @@ const HTMLParsedJSON = (htmlText,obj) => {
   try{
     // options
     const $ = cheerio.load(htmlText);
-    obj.result = [];
-    const o = Object.assign({});
+    obj.result = Object.assign({});
 
     if(obj.getOptionFlag){//productOptionListを取得する場合
       const eleList = $('[id^="menu-"]');
@@ -48,7 +47,10 @@ const HTMLParsedJSON = (htmlText,obj) => {
           name = id;
         };
         const objName = name;
+        //if(!obj.result[objName])
+
         let resultArray = [];
+        obj.result[objName] = Object.assign({});
         resultArray = [...$(`#${id} ${obj.getQuery}`),...$(`#${id} ul.productOptionList > li`)];
 
 
@@ -57,10 +59,10 @@ const HTMLParsedJSON = (htmlText,obj) => {
         switch (objName){
           case "sizeup":
           case "party"://データに加えない子たち
-            o.status = "skip";
+            obj.result[objName].status = "skip";
             return;
           case "free-topping"://ここだけ、実データを代入している
-            o.status = "already";
+            obj.result[objName].status = "already";
             const {freeToppingList} = require("./data");
             resultArray = freeToppingList;
             // console.log(obj,resultArray);
@@ -69,20 +71,20 @@ const HTMLParsedJSON = (htmlText,obj) => {
         }
 
         if(resultArray.length){
-          o.ary = Array.from(new Set(resultArray));
-          o.id = id;
-          o.name = objName;
+          obj.result[objName].ary = Array.from(new Set(resultArray));
+          obj.result[objName].id = id;
+          obj.result[objName].name = objName;
         }
-        // console.log((o.ary));
-        // console.log(`result:${objName}`,o.ary.length,resultArray.length);
+        // console.log((obj.result[objName].ary));
+        // console.log(`result:${objName}`,obj.result[objName].ary.length,resultArray.length);
       })
 
     }else{
-      o.ary = [].slice.call($(obj.getQuery));
-      o.id = null;
-      o.name = obj.resultName;
+      obj.result[obj.resultName] = Object.assign({});
+      obj.result[obj.resultName].ary = [].slice.call($(obj.getQuery));
+      obj.result[obj.resultName].id = null;
+      obj.result[obj.resultName].name = obj.resultName;
     }
-    obj.result.push(o);
     // console.log(`result${obj.url}:`,obj.result.length);
   }catch (e){
     console.error(e)

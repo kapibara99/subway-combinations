@@ -175,34 +175,40 @@ const parseItem = (resultObj) => {
 
 const toJSON = (toJSONObj) => {
   //toJSONObjをjsonにして、リソースを更新する
-  const result = toJSONObj.slice();
-  result.forEach(page => {
-    const list = Object.keys(page.result);
+  let output = Object.assign({});
+
+  const keys = Object.keys(toJSONObj);
+  keys.forEach(k => {
+    const list = Object.keys(toJSONObj[k].result);
     if(!list.length) return;
     list.forEach(key =>{
-      parseItem(page.result[key]);
+      parseItem(toJSONObj[k].result[key]);
+      output[key] = toJSONObj[k].result[key]
     })
   })
+  const {replaceKeys} = require("./data");
+  output = replaceKeys(output);
 
   //remove element
   //convert
   const resultPath = "data/output.json"
   const { decycle } = require('json-cyclic');
 
-  fs.writeFile(resultPath,JSON.stringify(decycle(result),null,2),
+  fs.writeFile(resultPath,JSON.stringify(decycle(output),null,2),
   (err) =>{ if(err) console.log(`error!::${err}`)});
 }
 
 const parseData = () => {
   // tools/result/のhtmlを取得
   const {targetList} = require("./data");
-  const result = [];
+  const result = Object.assign({});
 
   targetList.forEach((d)=>{
     try{
       const data = fs.readFileSync(`tools/result/${d.resultName}.html`, "utf-8")
       //parsedJSON
-      result.push(HTMLParsedJSON(data,d));
+      // result.push(HTMLParsedJSON(data,d));
+      result[d.resultName] = HTMLParsedJSON(data,d);
     }catch(e){
       console.log(e.message);
     }

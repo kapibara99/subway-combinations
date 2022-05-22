@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 // Local Components
 import { CheckList } from '../components/checkList/checkList';
 import MinimumDistanceSlider from '../components/SlideBar/SlideBar';
-import { MarginSet } from '../components/usuallyMargin/MarginSet';
+import { MarginSet } from '../components/UsuallyMargin/marginSet';
 
 export const Home = () => {
     return (

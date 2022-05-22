@@ -4,7 +4,6 @@ import "./margin.scss"
 export const MarginSet = (props:marginSetType) => {
   const style = String(props.value) ? `margin-${props.value}` : "";
   const marginNum = !Number.isNaN(props.value) ? Number(props.value) : false;
-  console.log(marginNum);
 
   if(marginNum){
     return (

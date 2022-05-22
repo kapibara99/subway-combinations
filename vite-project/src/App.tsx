@@ -34,7 +34,14 @@ const theme = createTheme({
     },
 });
 
+
+//redux
+import { useDispatch, useSelector } from 'react-redux';
+import { updateDataAction } from './redux/MenuData/action';
 function App() {
+  const dispatch = useDispatch();
+  const selector = useSelector(state => state);
+  // console.log(selector);
   const [data , setData] = useState<Data[]>([]);
   useEffect(() => {
     axios(options)
@@ -42,13 +49,17 @@ function App() {
       const { data, status } = res;
       //やりたいことをやる
       if(status === 200) setData(data);
-      console.log("get data",data);
+      // console.log("get data",data);
+      dispatch(updateDataAction(data))
+      console.log("s");
+
     })
     .catch((e: AxiosError<{ error: string }>) => {
       // エラー処理
       console.log(e.message);
     });
   },[]);
+
 
 
 

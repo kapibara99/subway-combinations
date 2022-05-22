@@ -135,13 +135,26 @@ const setItemInfo = (element,resultAry) => {
     const obj = Object.assign({},priceTemplate);
     const $$ = cheerio.load(el);
     const priceName = $$(".price_name").text();
-    // if(!priceName || !priceName.length)return;
+    if(!($$.text().replace("\n","").length)){//改行のみの場合は何も返さない
+      return;
+    }
 
+    //set
     obj.name = priceName;
     obj.price = Number($$(".price_yen").text().replace("￥","").replace("¥",""));
     obj.carbohydrate = Number($$(".price_carb").text().replace("g","").replace("糖質 ",""));
     obj.kcal = Number($$(".price_kcal").text().replace("kcal",""));
 
+    //もし空なら正規表現で探してみる
+    if(!obj.price){
+      obj.price = Number(String(String(el).match(/[¥¥|¥¥|¥￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+    }
+    if(!obj.carbohydrate){
+      obj.carbohydrate = Number(String(String(el).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+    }
+    if(!obj.kcal){
+      obj.kcal = Number(String(String(el).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
+    }
     temp.size.push(obj);
   })
   resultAry.push(temp);
@@ -173,33 +186,40 @@ const parseItem = (resultObj) => {
 
 const toJSON = (toJSONObj) => {
   //toJSONObjをjsonにして、リソースを更新する
-  const result = toJSONObj.slice();
-  result.forEach(page => {
-    if(!page.result.length) return;
-    page.result.forEach(item =>{
-      parseItem(item);
+  let output = Object.assign({});
+
+  const keys = Object.keys(toJSONObj);
+  keys.forEach(k => {
+    const list = Object.keys(toJSONObj[k].result);
+    if(!list.length) return;
+    list.forEach(key =>{
+      parseItem(toJSONObj[k].result[key]);
+      output[key] = toJSONObj[k].result[key]
     })
   })
+  const {replaceKeys} = require("./data");
+  output = replaceKeys(output);
 
   //remove element
   //convert
   const resultPath = "data/output.json"
   const { decycle } = require('json-cyclic');
 
-  fs.writeFile(resultPath,JSON.stringify(decycle(result),null,2),
+  fs.writeFile(resultPath,JSON.stringify(decycle(output),null,2),
   (err) =>{ if(err) console.log(`error!::${err}`)});
 }
 
 const parseData = () => {
   // tools/result/のhtmlを取得
   const {targetList} = require("./data");
-  const result = [];
+  const result = Object.assign({});
 
   targetList.forEach((d)=>{
     try{
       const data = fs.readFileSync(`tools/result/${d.resultName}.html`, "utf-8")
       //parsedJSON
-      result.push(HTMLParsedJSON(data,d));
+      // result.push(HTMLParsedJSON(data,d));
+      result[d.resultName] = HTMLParsedJSON(data,d);
     }catch(e){
       console.log(e.message);
     }

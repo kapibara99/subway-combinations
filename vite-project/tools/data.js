@@ -40,4 +40,27 @@ const freeToppingList = [
     "name":"ホットペッパー"
   }
 ]
-module.exports = {targetList,freeToppingList};
+const parentDataList = {
+  "Sandwich":["limited","sandwich"],
+  "SetMenu":["party","setmenu"],
+  "SideMenu":["salad","sidemenu","drink"],
+  "Require":["bread","topping","vegetable","sauce"],
+  "SandwichOption":["sizeup","vegetable","free-topping"],
+}
+const replaceKeys = (data) => {
+  const result = Object.assign({});
+  const parentKey = Object.keys(parentDataList);
+
+  parentKey.forEach((parentKey)=>{
+    result[parentKey] = Object.assign({});
+
+    Object.keys(data).forEach((key)=>{
+      if(parentDataList[parentKey].includes(key) && data.status !== "skip"){
+        result[parentKey][key] = data[key].output;
+      }
+    })
+  })
+  return result;
+}
+
+module.exports = {targetList,freeToppingList,replaceKeys};

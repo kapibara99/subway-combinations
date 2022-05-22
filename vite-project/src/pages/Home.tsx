@@ -5,13 +5,15 @@ import { useEffect, useState } from 'react';
 import { CheckList } from '../components/checkList/checkList';
 import MinimumDistanceSlider from '../components/SlideBar/SlideBar';
 import { MarginSet } from '../components/usuallyMargin/marginSet';
-export const Home = () => {
 
+export const Home = () => {
     return (
     <main>
       <CheckList />
       <MarginSet value="large" />
       <MinimumDistanceSlider />
+      <MarginSet value="large" />
+
     </main>
   )
 }

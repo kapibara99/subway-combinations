@@ -1,7 +1,13 @@
 import { useState , useEffect } from 'react'
 
-export const Result = () => {
+import { ResultCard } from '../components/resultCard/resultCard';
+
+export const Result = (props:any) => {
+  const {data , setData} = props;
+
   return (
-    <main>result</main>
+    <main>
+      <ResultCard />
+    </main>
   )
 }

@@ -57,7 +57,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result />} />
+        <Route path="/result" element={<Result data={data} setData={setData}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

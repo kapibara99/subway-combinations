@@ -23,16 +23,14 @@ https://www.figma.com/file/077J1kN5chneLHBlGGS0EE/99-kapy's-team-library?node-id
 
 
 ## フローチャート
-1 データ用意 node
-get html .js
-- リストにあるURLをアクセスして、必要情報を取得する
-parse html .js
-- 取得したHTMLファイルを解析して
-- JSON化する
 
 2 フロントデザイン / 実装
 - how to orderページは後回し
-- 先にフロントとJSONロジックを作ってみて、
-- parseと往復
+
+- result UI(使わないかもしれないけど、modalで詳細を見れるように)
+- button UI
+- get data and draw result
+-
+
 
 3

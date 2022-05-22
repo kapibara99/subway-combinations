@@ -4,17 +4,14 @@ import App from './App'
 import './index.scss'
 import { BrowserRouter } from 'react-router-dom';
 
-// redux
-import {Provider} from 'react-redux';//react-reduxの機能
-import {store} from './redux/store/store';
 
 // render
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <BrowserRouter>
-      <Provider store={store}>
+      {/* <Provider store={store}> */}
         <App />
-      </Provider>
+      {/* </Provider> */}
     </BrowserRouter>
   </React.StrictMode>
 )

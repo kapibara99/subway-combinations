@@ -24,7 +24,6 @@ export const checkFlags = checkBoxLabels.map<checkInfo>((v,i)=>{
 
 export const CheckList = () => {
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-    console.log(e.target.value);
     checkFlags.forEach((obj)=>{
       if(obj.name === e.target.value){
         obj.val = e.target.checked;

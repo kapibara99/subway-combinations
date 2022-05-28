@@ -13,14 +13,6 @@ import { Header } from "./common/Header/header";
 import { Footer } from "./common/Footer/footer";
 
 
-//axios
-import axios , { AxiosRequestConfig, AxiosResponse, AxiosError } from "axios";
-const dataSRC = "../data/output.json"
-const options: AxiosRequestConfig = {
-  url: dataSRC,
-  method: "GET",
-};
-
 // style
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 const theme = createTheme({
@@ -35,40 +27,15 @@ const theme = createTheme({
 });
 
 
-//redux
-import { useDispatch, useSelector } from 'react-redux';
-import { updateDataAction } from './redux/MenuData/action';
+
 function App() {
-  const dispatch = useDispatch();
-  const selector = useSelector(state => state);
-  // console.log(selector);
-  const [data , setData] = useState<Data[]>([]);
-  useEffect(() => {
-    axios(options)
-    .then((res: AxiosResponse<Data[]>) => {
-      const { data, status } = res;
-      //やりたいことをやる
-      if(status === 200) setData(data);
-      // console.log("get data",data);
-      dispatch(updateDataAction(data))
-      console.log("s");
-
-    })
-    .catch((e: AxiosError<{ error: string }>) => {
-      // エラー処理
-      console.log(e.message);
-    });
-  },[]);
-
-
-
 
   return (
     <ThemeProvider theme={theme}>
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/result" element={<Result data={data} setData={setData}/>} />
+        <Route path="/result" element={<Result/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

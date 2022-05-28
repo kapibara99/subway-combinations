@@ -1,10 +1,10 @@
 
-interface InitializeMenuData {
+interface InitializeSearchOptions {
   data: Data[],
   time ? : Date,
   func ? : Function,
 }
-const initialState:InitializeMenuData = {
+const initialState:InitializeSearchOptions = {
   data:[],
 }
 

@@ -6,8 +6,8 @@ import { BrowserRouter } from 'react-router-dom';
 
 // redux
 import {Provider} from 'react-redux';//react-reduxの機能
-import createStore from './redux/MenuData/store';
-export const store = createStore();
+import createReduxStore from './redux/store';
+export const store = createReduxStore();
 
 
 // render

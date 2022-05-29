@@ -5,31 +5,33 @@ import { CheckBoxOrigin } from '../../components/CheckBoxOrigin/CheckBoxOrigin';
 // styles
 import "./checkList.scss"
 
+import { useDispatch , useSelector} from 'react-redux';
+import { setFirstOptions , setOption , updateOptions } from '../../redux/searchOptions/action';
+import { store } from '../../main';
+
 // config
 const checkBoxLabels = [
   "セットあり",
   "サイドメニューあり",
   "店舗限定メニューあり"
 ]
-interface checkInfo {
-  name : string,
-  val : boolean
-}
-export const checkFlags = checkBoxLabels.map<checkInfo>((v,i)=>{
-  const obj = Object.assign({});
-  obj.name = checkBoxLabels[i];
-  obj.val = false//initialize
-  return obj;
-});
 
 export const CheckList = () => {
+  const dispatch = useDispatch();
+  dispatch(setFirstOptions(checkBoxLabels));
+  const searchOptions = Object.assign([],setFirstOptions(checkBoxLabels).payload.array);
+
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {
-    checkFlags.forEach((obj)=>{
-      if(obj.name === e.target.value){
-        obj.val = e.target.checked;
-        return
+    const obj:InitializeSearchOption = {
+      name:e.target.value,
+      flag:e.target.checked
+    }
+    searchOptions.forEach((v:InitializeSearchOption)=>{
+      if(v.name == e.target.value){
+        v.flag = e.target.checked;
       }
     })
+    dispatch(updateOptions(searchOptions));
   }
 
     return (
@@ -37,10 +39,10 @@ export const CheckList = () => {
       <h2>検索オプション</h2>
       <div className="c-checkList">
         <div className="c-checkList__inner">
-        {checkFlags.map((item,i)=>{
+        {searchOptions.map((item:InitializeSearchOption,i:number)=>{
           i += 1
           return (
-            <CheckBoxOrigin key={item.name} id={String(item.name)} onChange={handleChange} label={item.name} checked={item.val}/>
+            <CheckBoxOrigin key={item.name} id={String(item.name)} onChange={handleChange} label={item.name} checked={item.flag}/>
           )
         })}
         </div>

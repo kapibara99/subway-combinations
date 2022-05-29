@@ -1,11 +1,6 @@
 
-interface InitializeSearchOptions {
-  data: Data[],
-  time ? : Date,
-  func ? : Function,
-}
-const initialState:InitializeSearchOptions = {
-  data:[],
+const initialState:any = {
+  array:[]
 }
 
 export default initialState;

@@ -31,6 +31,3 @@ https://www.figma.com/file/077J1kN5chneLHBlGGS0EE/99-kapy's-team-library?node-id
 - button UI
 - get data and draw result
 -
-
-
-3aaaaa

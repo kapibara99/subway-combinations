@@ -1,8 +1,4 @@
-/**
- * @param {string} url - スクレイピングするURL
- * @param {string} getQuery - JSONに落としたい対象のcss query
- * @param {string} resultName - 出力先のファイル名
-*/
+
 const targetList = [
   {
     url:"https://www.subway.co.jp/menu/sandwich/",
@@ -42,21 +38,46 @@ const freeToppingList = [
 ]
 const parentDataList = {
   "Sandwich":["limited","sandwich"],
-  "SetMenu":["party","setmenu"],
-  "SideMenu":["salad","sidemenu","drink"],
-  "Require":["bread","topping","vegetable","sauce"],
-  "SandwichOption":["sizeup","vegetable","free-topping"],
+  "freeTopping":["bread","vegetable","sauce","free-topping"],
+  "paidOptions":{
+    "topping":["topping"],
+    "SetMenu":["party","setmenu"],
+    "SideMenu":["salad","drink"],
+  },
 }
+
 const replaceKeys = (data) => {
-  const result = Object.assign({});
+  let result = Object.assign({});
   const parentKey = Object.keys(parentDataList);
 
   parentKey.forEach((parentKey)=>{
-    result[parentKey] = Object.assign({});
+    const isObjectFlg = (typeof parentDataList[parentKey] === "object" && !Array.isArray(parentDataList[parentKey]))
+    if(isObjectFlg){
+      result[parentKey] = Object.assign({});
+    }else{
+      result[parentKey] = Object.assign([]);
+    }
 
     Object.keys(data).forEach((key)=>{
-      if(parentDataList[parentKey].includes(key) && data.status !== "skip"){
-        result[parentKey][key] = data[key].output;
+
+      if(data.status !== "skip"){
+        if(isObjectFlg){
+          Object.keys(parentDataList[parentKey]).forEach((optionKey)=>{
+            if(!Array.isArray(result[parentKey][optionKey])){
+              result[parentKey][optionKey] = [];
+            }
+            const optionNames = parentDataList[parentKey][optionKey];
+            if(optionNames.includes(key)){
+              result[parentKey][optionKey].push(data[key].output);
+            }
+          })
+        }else{
+          if(parentDataList[parentKey].includes(key)){
+            data[key]["output"].forEach((d)=>{
+              result[parentKey].push(d);
+            })
+          }
+        }
       }
     })
   })

@@ -17,7 +17,6 @@ const getHTMLData = (obj) =>{
     },(err, req, data) => {
       if(req.statusCode == 200){
         resolve(data)
-        //HTMLParsedJSON(data,obj);
         fs.writeFileSync(path.resolve(__dirname,`./result/${obj.resultName}.html`), data);
       }
       resolve("");
@@ -65,7 +64,6 @@ const HTMLParsedJSON = (htmlText,obj) => {
             obj.result[objName].status = "already";
             const {freeToppingList} = require("./data");
             resultArray = freeToppingList;
-            // console.log(obj,resultArray);
           default :
             break;
         }
@@ -91,15 +89,7 @@ const HTMLParsedJSON = (htmlText,obj) => {
   }
   return obj;
 }
-//todo
-/*
--各種で取得した、liのデータから、アウトプット用の情報を定義する
-name string,
-link string,
-price(size : regular || long) Number,
-糖質も一応 (size : regular || long) Number,
-kcal (size : regular || long) Number,
-*/
+
 /**
  * @param {string} name - name
  * @param {string} link - link path
@@ -122,7 +112,7 @@ const priceTemplate = {
   carbohydrate : 0,
   kcal : 0,
 }
-const setItemInfo = (element,resultAry) => {
+const setItemInfo = (element,resultAry,name) => {
   const temp = Object.assign({},parentTemplate);
   const $ = cheerio.load(element);
   temp.name = $(".product_name_ja").text();
@@ -130,6 +120,7 @@ const setItemInfo = (element,resultAry) => {
     temp.name = $(".product_name h4").text();
   }
   temp.link = $("li > a").attr("href");
+  temp.category = name;
   temp.size = []
 
   const priceAreaAry = Array.from($(".price_area"));
@@ -137,9 +128,6 @@ const setItemInfo = (element,resultAry) => {
     const obj = Object.assign({},priceTemplate);
     const $$ = cheerio.load(el);
     const priceName = $$(".price_name").text();
-    if(!($$.text().replace("\n","").length)){//改行のみの場合は何も返さない
-      return;
-    }
 
     //set
     obj.name = priceName;
@@ -148,16 +136,29 @@ const setItemInfo = (element,resultAry) => {
     obj.kcal = Number($$(".price_kcal").text().replace("kcal",""));
 
     //もし空なら正規表現で探してみる
-    if(!obj.price){
-      obj.price = Number(String(String(el).match(/[¥¥|¥¥|¥￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+    function setInfo(element,object){
+      if(!object.price){
+        object.price = Number(String(String($$(element).text()).match(/[\¥|\¥|\￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+      }
+      if(!object.carbohydrate){
+        object.carbohydrate = Number(String(String($$(element).text()).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+      }
+      if(!object.kcal){
+        object.kcal = Number(String(String($$(element).text()).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
+      }
     }
-    if(!obj.carbohydrate){
-      obj.carbohydrate = Number(String(String(el).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+    const moreSearchEl = Array.from($$(".descBox"));
+    moreSearchEl.forEach((el)=>{
+      setInfo(el,obj);
+    })
+    setInfo($$,obj);
+    if(obj.name !== "" &&( obj.price || obj.carbohydrate || obj.kcal )){
+      temp.size.push(obj);
+    }else if(obj.price || obj.carbohydrate || obj.kcal){
+      temp.price = obj.price
+      temp.carbohydrate = obj.carbohydrate
+      temp.kcal = obj.kcal
     }
-    if(!obj.kcal){
-      obj.kcal = Number(String(String(el).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
-    }
-    temp.size.push(obj);
   })
   resultAry.push(temp);
 }
@@ -173,6 +174,8 @@ const parseItem = (resultObj) => {
     resultObj.ary.forEach(item => {
       const temp = Object.assign({},parentTemplate);
       temp.name = item.name;
+      temp.category = resultObj.name;
+      temp.size = [];
       resultObj.output.push(temp);
     });
     delete resultObj.ary;
@@ -181,7 +184,7 @@ const parseItem = (resultObj) => {
 
   for(var i = 0; i < resultObj.ary.length; i++){
     const el = resultObj.ary[i];
-    setItemInfo(el,resultObj.output);
+    setItemInfo(el,resultObj.output,resultObj.name);
   }
   delete resultObj.ary;
 }
@@ -200,14 +203,14 @@ const toJSON = (toJSONObj) => {
     })
   })
   const {replaceKeys} = require("./data");
-  output = replaceKeys(output);
+  const fin = replaceKeys(output);
 
   //remove element
   //convert
   const resultPath = "data/output.json"
   const { decycle } = require('json-cyclic');
 
-  fs.writeFile(resultPath,JSON.stringify(decycle(output),null,2),
+  fs.writeFile(resultPath,JSON.stringify(decycle(fin),null,2),
   (err) =>{ if(err) console.log(`error!::${err}`)});
 }
 

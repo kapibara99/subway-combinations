@@ -8,7 +8,7 @@ declare interface checkBoxType {
 declare interface marginSetType {
   value : "large" | "middle" | "small" | Number;
 }
-
+export type menuStringType = "Sandwich" | "SetMenu" | "SideMenu" | "Require" | "SandwichOption";
 declare namespace JSX {
   // JSX.Elementを定義
   interface IntrinsicElements {

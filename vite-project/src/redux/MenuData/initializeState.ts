@@ -1,7 +1,8 @@
 
 
 const initialState:InitializeMenuData = {
-  data:[],
+  updateData:{},
+  time:new Date()
 }
 
 export default initialState;

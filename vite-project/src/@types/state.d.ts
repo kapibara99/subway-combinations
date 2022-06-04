@@ -1,5 +1,5 @@
 interface InitializeMenuData {
-  data: Data[],
+  updateData: {},
   time ? : Date,
   func ? : Function,
 }

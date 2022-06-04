@@ -16,14 +16,41 @@ export async function postData(url = '', data = {}) {
   return response.json(); // JSON のレスポンスをネイティブの JavaScript オブジェクトに解釈
 }
 
-export function editData (type:string,origin:object){
-  const result = Object.assign(origin);
+import { menuStringType } from "../../@types/element";
+const initializeData:Output = {
+  name:"test",
+  link:"hoge",
+}
+export const editData = (type:menuStringType,origin:object):Output[] => {
+  const obj = Object.assign(origin);
+  let result:Output[] = [];
   switch (type){
-    case "sandwich":
-      break;
+    case "Sandwich":
     default :
+      const ary = obj.Sandwich.sandwich;
+      if(ary.length){
+        result = random(3,ary);
+      }else{
+        result.push(initializeData);
+      }
       break;
   }
   return result;
 }
 
+/**
+ * @module random
+ * @param {number} sliceNumber - 何個返すか
+ * @return {Output[]} - 表示用のメニュー情報を配列で返す
+*/
+const random = (sliceNumber:number,originArray:Output[]) => {
+  const shuffle = ([...array]) => {
+    for (let i = array.length - 1; i >= 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+  }
+  const ary = shuffle(originArray);
+  return ary.slice(0,sliceNumber);
+}

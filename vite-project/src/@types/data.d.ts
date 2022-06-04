@@ -1,9 +1,5 @@
 declare type Data = {
-  url: string,
-  getQuery: string,
-  resultName: string,
-  getOptionFlag: boolean,
-  result: Result[]
+
 };
 declare type Result = {
   id: string,
@@ -14,11 +10,17 @@ declare type Result = {
 declare type Output = {
   name: string,
   link: string,
-  size: SizeElement[]
+  size?: SizeElement[]
 };
 declare type SizeElement = {
   name?: string;
   price?:number,
-  carbohydrate:number,
-  kcal:number,
+  carbohydrate?:number,
+  kcal?:number,
 };
+
+// export const initializeData:Data = {
+//   url:"",
+//   getQuery:"",
+//   resultName
+// }

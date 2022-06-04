@@ -1,14 +1,17 @@
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
+import { useState } from 'react';
 
 type Props = {
   name: string,
-  link: string,
-  size:SizeElement[]
+  value: Data,
 }
 
-export const ResultCard = () => {
+export const ResultCard = (props:Props) => {
+  const [data , setData] = useState(props);
+  console.log(data);
+
   return(
       <Card>
         <CardContent>

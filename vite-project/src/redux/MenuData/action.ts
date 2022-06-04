@@ -1,6 +1,6 @@
 export const UPDATE_DATA = "UPDATE_DATA";
 
-export const updateDataAction = (dataState:Data[]) => {
+export const updateDataAction = (dataState:Output[]) => {
   return {
     type:"UPDATE_DATA",
     payload:{

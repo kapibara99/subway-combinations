@@ -1,7 +1,7 @@
 import * as Actions from "./action";
 import initialState from "./initializeState";
 
-export const dataReducer = (state = initialState.data,action:any) => {
+export const dataReducer = (state = initialState,action:any) => {
   switch(action.type){
     case Actions.UPDATE_DATA:
       return {

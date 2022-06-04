@@ -9,7 +9,12 @@ import { createStore, combineReducers } from 'redux'
 
 export const Result = () => {
   const dispatch = useDispatch();
-  const selector = useSelector(state => state);
+  const selector:any = useSelector(state => state);
+  const options = selector.searchOptions.array;
+  const menu = selector.menuData.updateData;
+  console.log(options,menu);
+
+
 
   useEffect(()=>{
     postData("../../data/output.json").then(data=>{

@@ -38,11 +38,12 @@ const freeToppingList = [
 ]
 const parentDataList = {
   "Sandwich":["limited","sandwich"],
-  "freeTopping":["bread","vegetable","sauce","free-topping"],
-  "paidOptions":{
-    "topping":["topping"],
+  "FreeTopping":["bread","vegetable","sauce","free-topping"],
+  "PaidTopping":["topping"],
+  "PaidOptions":{
     "SetMenu":["party","setmenu"],
     "SideMenu":["salad","drink"],
+    "StoreOriginal":[],
   },
 }
 

@@ -10,7 +10,7 @@ type Props = {
 
 export const ResultCard = (props:Props) => {
   const [data , setData] = useState(props.value);
-
+  
   return(
       <Card>
         <CardContent>

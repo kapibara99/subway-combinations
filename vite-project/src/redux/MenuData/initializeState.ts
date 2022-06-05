@@ -2,11 +2,12 @@
 
 const initialState:InitializeMenuData = {
   Sandwich:[],
-  freeTopping:[],
-  paidOptions:{
-    topping:[],
+  FreeTopping:[],
+  PaidTopping:[],
+  PaidOptions:{
     SetMenu:[],
     SideMenu:[],
+    StoreOriginalMenu:[],
   },
   updateTime:new Date()
 }

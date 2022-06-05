@@ -1,10 +1,11 @@
 interface InitializeMenuData {
   Sandwich:Data[],
-  freeTopping:Data[],
-  paidOptions:{
-    topping:Data[],
+  FreeTopping:Data[],
+  PaidTopping:Data[],
+  PaidOptions:{
     SetMenu:Data[],
     SideMenu:Data[],
+    StoreOriginalMenu:Data[],
   },
   updateTime ? : Date,
 }

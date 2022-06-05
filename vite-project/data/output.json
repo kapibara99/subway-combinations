@@ -357,7 +357,7 @@
       "category": "sandwich"
     }
   ],
-  "freeTopping": [
+  "FreeTopping": [
     {
       "name": "ウィート",
       "link": "/menu/bread/2246.html",
@@ -481,128 +481,126 @@
       "category": "sauce"
     }
   ],
-  "paidOptions": {
-    "topping": [
-      [
+  "PaidTopping": [
+    {
+      "name": "ナチュラルスライスチーズ",
+      "link": "/menu/topping_menu/2254.html",
+      "size": [
         {
-          "name": "ナチュラルスライスチーズ",
-          "link": "/menu/topping_menu/2254.html",
-          "size": [
-            {
-              "name": "2枚",
-              "price": 50,
-              "carbohydrate": null,
-              "kcal": 47
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "クリームタイプチーズ",
-          "link": "/menu/topping_menu/2253.html",
-          "size": [
-            {
-              "name": "20ｇ",
-              "price": 70,
-              "carbohydrate": null,
-              "kcal": 64
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "マスカルポーネチーズ",
-          "link": "/menu/topping_menu/2252.html",
-          "size": [
-            {
-              "name": "20ｇ",
-              "price": 100,
-              "carbohydrate": null,
-              "kcal": 51
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "たまご",
-          "link": "/menu/topping_menu/2249.html",
-          "size": [
-            {
-              "name": "1スクープ",
-              "price": 70,
-              "carbohydrate": null,
-              "kcal": 65
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "ベーコン",
-          "link": "/menu/topping_menu/2247.html",
-          "size": [
-            {
-              "name": "2枚",
-              "price": 70,
-              "carbohydrate": null,
-              "kcal": 48
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "ツナ",
-          "link": "/menu/topping_menu/2248.html",
-          "size": [
-            {
-              "name": "1スクープ",
-              "price": 70,
-              "carbohydrate": null,
-              "kcal": 68
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "えび",
-          "link": "/menu/topping_menu/2251.html",
-          "size": [
-            {
-              "name": "5尾",
-              "price": 120,
-              "carbohydrate": null,
-              "kcal": 16
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "アボカド",
-          "link": "/menu/topping_menu/2250.html",
-          "size": [
-            {
-              "name": "1スクープ",
-              "price": 150,
-              "carbohydrate": null,
-              "kcal": 74
-            }
-          ],
-          "category": "topping"
-        },
-        {
-          "name": "モッツァレラミックスチーズ",
-          "link": "/menu/topping_menu/2564.html",
-          "size": [
-            {
-              "name": "1スクープ",
-              "price": 50,
-              "carbohydrate": null,
-              "kcal": 46
-            }
-          ],
-          "category": "topping"
+          "name": "2枚",
+          "price": 50,
+          "carbohydrate": null,
+          "kcal": 47
         }
-      ]
-    ],
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "クリームタイプチーズ",
+      "link": "/menu/topping_menu/2253.html",
+      "size": [
+        {
+          "name": "20ｇ",
+          "price": 70,
+          "carbohydrate": null,
+          "kcal": 64
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "マスカルポーネチーズ",
+      "link": "/menu/topping_menu/2252.html",
+      "size": [
+        {
+          "name": "20ｇ",
+          "price": 100,
+          "carbohydrate": null,
+          "kcal": 51
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "たまご",
+      "link": "/menu/topping_menu/2249.html",
+      "size": [
+        {
+          "name": "1スクープ",
+          "price": 70,
+          "carbohydrate": null,
+          "kcal": 65
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "ベーコン",
+      "link": "/menu/topping_menu/2247.html",
+      "size": [
+        {
+          "name": "2枚",
+          "price": 70,
+          "carbohydrate": null,
+          "kcal": 48
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "ツナ",
+      "link": "/menu/topping_menu/2248.html",
+      "size": [
+        {
+          "name": "1スクープ",
+          "price": 70,
+          "carbohydrate": null,
+          "kcal": 68
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "えび",
+      "link": "/menu/topping_menu/2251.html",
+      "size": [
+        {
+          "name": "5尾",
+          "price": 120,
+          "carbohydrate": null,
+          "kcal": 16
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "アボカド",
+      "link": "/menu/topping_menu/2250.html",
+      "size": [
+        {
+          "name": "1スクープ",
+          "price": 150,
+          "carbohydrate": null,
+          "kcal": 74
+        }
+      ],
+      "category": "topping"
+    },
+    {
+      "name": "モッツァレラミックスチーズ",
+      "link": "/menu/topping_menu/2564.html",
+      "size": [
+        {
+          "name": "1スクープ",
+          "price": 50,
+          "carbohydrate": null,
+          "kcal": 46
+        }
+      ],
+      "category": "topping"
+    }
+  ],
+  "PaidOptions": {
     "SetMenu": [
       null,
       [
@@ -1187,6 +1185,7 @@
           "kcal": 172
         }
       ]
-    ]
+    ],
+    "StoreOriginal": []
   }
 }

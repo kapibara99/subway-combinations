@@ -1,7 +1,7 @@
 import { useState , useEffect } from 'react'
 //mui
 import {Checkbox , FormControlLabel} from '@mui/material';
-
+import { checkBoxType } from '../../@types/element';
 
 export const CheckBoxOrigin = (prop:checkBoxType) => {
   let {id , label , checked , onChange} = prop;

@@ -8,7 +8,7 @@ declare type Data = {
   kcal ?: number
 };
 declare type Size = {
-  name ?: レギュラー,
+  name ?: string,
   price ?: number,
   carbohydrate ?: number,
   kcal ?: number

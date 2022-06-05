@@ -1,4 +1,5 @@
 import React, { useState , useEffect } from 'react'
+
 import { ResultCard } from '../components/resultCard/resultCard';
 //redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,15 +20,13 @@ export const Result = () => {
       dispatch(updateDataAction(data));
     });
   },[])
-  // const resultList:React.VFC = (array:Data[]) => {
-  //   return
-  // }
+
   return (
     <main>
-      {/* <p>aaaa</p> */}
-      {recommendMenu.map( (data:Data,i:number) =>
+      {recommendMenu.length && recommendMenu.map( (data:Data,i:number) =>
         <ResultCard key={i} name = {String(i)}  value = {data}/>
       )}
+      {!recommendMenu.length && <p>no data</p> }
     </main>
   )
 }

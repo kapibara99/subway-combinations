@@ -1,5 +1,6 @@
 import * as React from 'react';
 import "./margin.scss"
+import { marginSetType } from '../../@types/element';
 
 export const MarginSet = (props:marginSetType) => {
   const style = String(props.value) ? `margin-${props.value}` : "";

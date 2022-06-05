@@ -17,21 +17,14 @@ export async function postData(url = '', data = {}) {
 }
 
 import { menuStringType } from "../../@types/element";
-const initializeData:Output = {
-  name:"test",
-  link:"hoge",
-}
-export const editData = (type:menuStringType,origin:object):Output[] => {
-  const obj = Object.assign(origin);
-  let result:Output[] = [];
+export const editData = (type:menuStringType,origin:Data[]):Data[] => {
+  const ary = Object.assign([],origin);
+  let result:Data[] = [];
   switch (type){
     case "Sandwich":
     default :
-      const ary = obj.Sandwich.sandwich;
       if(ary.length){
         result = random(3,ary);
-      }else{
-        result.push(initializeData);
       }
       break;
   }
@@ -43,7 +36,7 @@ export const editData = (type:menuStringType,origin:object):Output[] => {
  * @param {number} sliceNumber - 何個返すか
  * @return {Output[]} - 表示用のメニュー情報を配列で返す
 */
-const random = (sliceNumber:number,originArray:Output[]) => {
+const random = (sliceNumber:number,originArray:Data[]) => {
   const shuffle = ([...array]) => {
     for (let i = array.length - 1; i >= 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));

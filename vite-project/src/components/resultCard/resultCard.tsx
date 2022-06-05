@@ -9,19 +9,18 @@ type Props = {
 }
 
 export const ResultCard = (props:Props) => {
-  const [data , setData] = useState(props);
-  console.log(data);
+  const [data , setData] = useState(props.value);
 
   return(
       <Card>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="secondary" gutterBottom>
-            Word of the Day
+            {data.name}
           </Typography>
           <Typography variant="h5" component="div">
           </Typography>
           <Typography sx={{ mb: 1.5 }} color="secondary">
-            adjective
+            {data.price}
           </Typography>
           <Typography variant="body2">
             well meaning and kindly.

@@ -1,15 +1,14 @@
 interface InitializeMenuData {
-  updateData: {},
-  time ? : Date,
-  func ? : Function,
+  Sandwich:Data[],
+  freeTopping:Data[],
+  paidOptions:{
+    topping:Data[],
+    SetMenu:Data[],
+    SideMenu:Data[],
+  },
+  updateTime ? : Date,
 }
 interface InitializeSearchOption {
   name:string,
   flag:boolean,
 }
-// interface PayloadAction<P, T> {
-//   type: T;
-//   payload: P;
-//   meta ?: M;
-//   error ?: E;
-// }

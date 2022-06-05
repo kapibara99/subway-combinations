@@ -1,11 +1,11 @@
 export const UPDATE_DATA = "UPDATE_DATA";
 
-export const updateDataAction = (dataState:Output[]) => {
+export const updateDataAction = (dataState:InitializeMenuData) => {
   return {
     type:"UPDATE_DATA",
     payload:{
-      updateData:dataState,
-      time:new Date(),
+      ...dataState,
+      updateTime:new Date(),
     }
   }
 }

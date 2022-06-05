@@ -1,5 +1,5 @@
 import{ createStore , combineReducers , applyMiddleware , compose }from "redux";
-import { dataReducer } from "./MenuData/reducers";
+import { menuDataReducer } from "./MenuData/reducers";
 import { searchOptionsReducer } from "./searchOptions/reducers";
 
 
@@ -13,7 +13,7 @@ const composeReduxDevToolsEnhancers = typeof window === 'object' && window.__RED
 export default function createReduxStore(){
   return createStore(
     combineReducers({
-      menuData:dataReducer,
+      menuData:menuDataReducer,
       searchOptions:searchOptionsReducer,
     }),
     composeReduxDevToolsEnhancers(applyMiddleware())

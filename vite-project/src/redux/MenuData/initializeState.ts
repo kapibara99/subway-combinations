@@ -1,8 +1,14 @@
 
 
 const initialState:InitializeMenuData = {
-  updateData:{},
-  time:new Date()
+  Sandwich:[],
+  freeTopping:[],
+  paidOptions:{
+    topping:[],
+    SetMenu:[],
+    SideMenu:[],
+  },
+  updateTime:new Date()
 }
 
 export default initialState;

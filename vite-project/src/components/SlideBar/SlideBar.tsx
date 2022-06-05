@@ -1,19 +1,28 @@
 import * as React from 'react';
+
+//mui
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
-import { useDispatch } from 'react-redux';
+
+// redux
+import { useDispatch, useSelector } from 'react-redux';
+import {  updatePriceOptions } from '../../redux/searchOptions/action';
+import { RootStateType } from '../../redux/type';
 
 function valuetext(value: number) {
   return `¥${value}`;
 }
 
+// config initialize
 const minDistance = 100;
 const maxValue = 1000;
 const minValue = 100;
 
 export default function MinimumDistanceSlider() {
-  const [value, setValue] = React.useState<number[]>([200, 500]);
   const dispatch = useDispatch();
+  const searchOptions = Object.assign([],useSelector((state:RootStateType) => state.searchOptions.PriceOption));
+
+  const [value, setValue] = React.useState<number[]>([searchOptions.min, searchOptions.max]);
 
   const handleChange = (
     event: Event,
@@ -35,7 +44,7 @@ export default function MinimumDistanceSlider() {
     } else {
       setValue(newValue as number[]);
     }
-    console.log(value);
+    dispatch(updatePriceOptions(value[0],value[1]))
   };
 
 

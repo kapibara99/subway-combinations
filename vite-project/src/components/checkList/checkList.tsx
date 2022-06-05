@@ -1,24 +1,19 @@
-//mui
 import { useEffect, useState } from 'react';
-import { CheckBoxOrigin } from '../../components/CheckBoxOrigin/CheckBoxOrigin';
 
 // styles
+import { CheckBoxOrigin } from '../../components/CheckBoxOrigin/CheckBoxOrigin';
 import "./checkList.scss"
 
+//redux
 import { useDispatch , useSelector} from 'react-redux';
 import {  updateOptions } from '../../redux/searchOptions/action';
 import { RootStateType } from '../../redux/type';
-// config
-const checkBoxLabels:SearchOption[] = [
-]
+
 
 export const CheckList = () => {
   const dispatch = useDispatch();
-  // useEffect(()=>{
-  //   dispatch(setFirstOptions(checkboxInfo));
-  // },[])
-
   const searchOptions = Object.assign([],useSelector((state:RootStateType) => state.searchOptions.SearchOption));
+
   const [checkboxInfo,setCheckBoxInfo] = useState(searchOptions);
 
   const handleChange = (e:React.ChangeEvent<HTMLInputElement>) => {

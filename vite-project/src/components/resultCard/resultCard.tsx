@@ -3,7 +3,8 @@ import { useState } from 'react';
 //mui
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import Box from '@mui/material/Box';
+
+import "./resultCard.scss"
 
 type Props = {
   name: string,
@@ -20,11 +21,21 @@ export const ResultCard = (props:Props) => {
       setCurrentTab(newValue);
     };
     return (
-      <Tabs value={currentTab} onChange={handleChange} centered>
-        {sizeArray.length > 1 && sizeArray.map((size,index) => (
-          <Tab label={size.name} id={`${buttonIdTemp}${index}`} aria-controls={`${contentIdTemp}${index}`}/>
-        ))}
-      </Tabs>
+      <>
+        {(() => {
+          if(sizeArray.length > 1){
+            return (
+            <Tabs value={currentTab} onChange={handleChange} centered>
+              {sizeArray.map((size,index) => (
+                <Tab label={size.name} id={`${buttonIdTemp}${index}`} aria-controls={`${contentIdTemp}${index}`}/>
+              ))}
+            </Tabs>
+            )
+          }else{
+            return <></>
+          }
+        })()}
+      </>
     )
   }
   const setTabContent = (size:Size,index:number) => {

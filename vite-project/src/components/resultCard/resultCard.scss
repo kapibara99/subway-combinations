@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.c-card{
+  $root : &;
+  width: 100%;
+  max-width: 330px;
+  margin:auto;
+  padding: 12px 24px;
+  box-shadow: 1px 1px 4px -1px #444;
+
+  @include mq(sp){
+    &:not(:last-of-type){
+      margin-bottom: 20px;
+    }
+  }
+  @include mq(){
+    &:not(:last-of-type){
+      margin-right: 30px;
+    }
+  }
+  &.-no-image{}
+
+  // elements
+  &__title{
+    text-align: center;
+  }
+  &__props{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+  }
+  &__prop-item{
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 14px;
+    text-align: center;
+    padding-top: 10px;
+
+    @include mq(){
+      font-size: 16px;
+    }
+    &.-price{}
+    &.-carbohydrate{}
+    &.-kcal{}
+  }
+}

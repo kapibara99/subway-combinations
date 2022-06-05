@@ -9,7 +9,16 @@ interface InitializeMenuData {
   },
   updateTime ? : Date,
 }
-interface InitializeSearchOption {
+interface InitializeSearchOptions {
+  SearchOption:SearchOption[],
+  PriceOption:PriceOption
+}
+interface PriceOption {
+  min:number,
+  max:number
+}
+interface SearchOption {
   name:string,
-  flag:boolean,
+  key:string,
+  flag ?:boolean,
 }

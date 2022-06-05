@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Slider from '@mui/material/Slider';
+import { useDispatch } from 'react-redux';
 
 function valuetext(value: number) {
   return `¥${value}`;
@@ -11,9 +12,10 @@ const maxValue = 1000;
 const minValue = 100;
 
 export default function MinimumDistanceSlider() {
-  const [value1, setValue1] = React.useState<number[]>([200, 500]);
+  const [value, setValue] = React.useState<number[]>([200, 500]);
+  const dispatch = useDispatch();
 
-  const handleChange1 = (
+  const handleChange = (
     event: Event,
     newValue: number | number[],
     activeThumb: number,
@@ -25,14 +27,15 @@ export default function MinimumDistanceSlider() {
     if (newValue[1] - newValue[0] < minDistance) {
       if (activeThumb === 0) {
         const clamped = Math.min(newValue[0], maxValue - minDistance);
-        setValue1([clamped, clamped + minDistance]);
+        setValue([clamped, clamped + minDistance]);
       } else {
         const clamped = Math.max(newValue[1], minDistance);
-        setValue1([clamped - minDistance, clamped]);
+        setValue([clamped - minDistance, clamped]);
       }
     } else {
-      setValue1(newValue as number[]);
+      setValue(newValue as number[]);
     }
+    console.log(value);
   };
 
 
@@ -42,8 +45,8 @@ export default function MinimumDistanceSlider() {
     <Box sx={{ width: 300 , margin: "auto"}}>
       <Slider
         getAriaLabel={() => 'Minimum distance'}
-        value={value1}
-        onChange={handleChange1}
+        value={value}
+        onChange={handleChange}
         valueLabelDisplay="auto"
         getAriaValueText={valuetext}
         disableSwap

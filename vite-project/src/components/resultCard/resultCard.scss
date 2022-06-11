@@ -30,19 +30,34 @@
     justify-content: center;
   }
   &__prop-item{
-    width: 33%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    width: 33%;
+    padding-top: 1em;
     font-size: 14px;
     text-align: center;
-    padding-top: 10px;
 
     @include mq(){
       font-size: 16px;
     }
-    &.-price{}
-    &.-carbohydrate{}
-    &.-kcal{}
+    &::before{
+      content: "";
+      display: block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      width: 48px;
+      height: 48px;
+      margin:0 auto 0.5em;
+    }
+    &.-price::before{
+      background-image: url(#{$icons}/icon-bread.svg);
+    }
+    &.-carbohydrate::before{
+      background-image: url(#{$icons}/icon-sugar.svg);
+    }
+    &.-kcal::before{
+      background-image: url(#{$icons}/icon-kcal.svg);
+    }
   }
 }

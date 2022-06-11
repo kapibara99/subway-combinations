@@ -3,6 +3,7 @@ declare type Data = {
   link: string,
   size ?: Size[],
   category ?: string,
+  image ?: string,
   price ?: number,
   carbohydrate ?: number,
   kcal ?: number

@@ -25,9 +25,9 @@ export const ResultCard = (props:Props) => {
         {(() => {
           if(sizeArray.length > 1){
             return (
-            <Tabs value={currentTab} onChange={handleChange} centered>
+            <Tabs key={currentTab} value={currentTab} onChange={handleChange} centered>
               {sizeArray.map((size,index) => (
-                <Tab label={size.name} id={`${buttonIdTemp}${index}`} aria-controls={`${contentIdTemp}${index}`}/>
+                <Tab key={size.name} label={size.name} id={`${buttonIdTemp}${index}`} aria-controls={`${contentIdTemp}${index}`}/>
               ))}
             </Tabs>
             )
@@ -47,6 +47,7 @@ export const ResultCard = (props:Props) => {
       id={`simple-tabpanel-${index}`}
       aria-labelledby={`simple-tab-${index}`}
       data-tab-value={size.name}
+      key={index}
       >
         {currentTab === index && (
           <div className="c-card__props">
@@ -61,8 +62,11 @@ export const ResultCard = (props:Props) => {
 
 
   return(
-    <div className="c-card -no-image">
+    <div className="c-card -no-image" key={props.name.toString()}>
       <h3 className="c-card__title">{data.name}</h3>
+      <div className="c-card__imageWrap">
+        <img src={data.image} alt={data.name} />
+      </div>
       {data.size?.length && setTabButtons(data.size)}
       {data.size?.map((sizeObj,index) => (setTabContent(sizeObj,index)))}
     </div>

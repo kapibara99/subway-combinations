@@ -122,6 +122,7 @@ const setItemInfo = (element,resultAry,name) => {
   temp.link = $("li > a").attr("href");
   temp.category = name;
   temp.size = []
+  temp.image = "https://www.subway.co.jp" + $(".product_image img").attr("src");
 
   const priceAreaAry = Array.from($(".price_area"));
   priceAreaAry.forEach(el => {

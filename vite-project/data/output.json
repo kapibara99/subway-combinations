@@ -11,7 +11,8 @@
           "kcal": 375
         }
       ],
-      "category": "limited"
+      "category": "limited",
+      "image": "https://www.subway.co.jp/assets_c/2022/05/meattacos_item-thumb-306xauto-3988.jpg"
     },
     {
       "name": "贅沢チーズタコス　〜情熱のチポトレ＆マスカルポーネ～",
@@ -24,7 +25,8 @@
           "kcal": 401
         }
       ],
-      "category": "limited"
+      "category": "limited",
+      "image": "https://www.subway.co.jp/assets_c/2022/05/cheesetacos_item-thumb-306xauto-3989.jpg"
     },
     {
       "name": "ローストビーフ　～プレミアム製法～",
@@ -43,7 +45,8 @@
           "kcal": 618
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/2bbbd82124fa6794a2358d893463bd4e57fd352a-thumb-167xauto-3219.jpg"
     },
     {
       "name": "生ハム＆マスカルポーネ",
@@ -62,7 +65,8 @@
           "kcal": 652
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/c330242f810da2073237c0d468c63b6c25330045-thumb-167xauto-3210.jpg"
     },
     {
       "name": "えびアボカド",
@@ -81,7 +85,8 @@
           "kcal": 678
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/396285ba8dec32a31028b6dd880ceadd9384a688-thumb-167xauto-3215.jpg"
     },
     {
       "name": "てり焼きチキン　〜焦がし醬油仕立て〜",
@@ -100,7 +105,8 @@
           "kcal": 692
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2022/03/teriyaki_item-thumb-167xauto-3929.jpg"
     },
     {
       "name": "ＢＬＴ",
@@ -119,7 +125,8 @@
           "kcal": 660
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/6925598d744e83a44f79f4e1b41dc6318f0125ba-thumb-167xauto-3217.jpg"
     },
     {
       "name": "サラダチキン",
@@ -138,7 +145,8 @@
           "kcal": 556
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2021/11/sand_chicken_item-thumb-167xauto-3856.jpg"
     },
     {
       "name": "チーズサラダチキン",
@@ -157,7 +165,8 @@
           "kcal": 662
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2021/11/sand_cheese_chicken_item-thumb-167xauto-3858.jpg"
     },
     {
       "name": "ツナ",
@@ -176,7 +185,8 @@
           "kcal": 700
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/8597b6f4faa440028f0330a7480ce1b7b6ecbfbb-thumb-167xauto-3232.jpg"
     },
     {
       "name": "チリチキン",
@@ -195,7 +205,8 @@
           "kcal": 546
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2021/03/chil-thumb-167xauto-3697.jpg"
     },
     {
       "name": "アボカドベジー",
@@ -214,7 +225,8 @@
           "kcal": 632
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/dee452ec8a7f7dc5837c5bc2946efa6d0a0449ce-thumb-167xauto-3226.jpg"
     },
     {
       "name": "たまご",
@@ -233,7 +245,8 @@
           "kcal": 636
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/e2724721c4c60e038a8f1c1f5d92464e0b1ab8a9-thumb-167xauto-3223.jpg"
     },
     {
       "name": "ベジーデライト",
@@ -252,7 +265,8 @@
           "kcal": 430
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2019/05/af0ca9fa6f98a4d5c3289852b6424c8c97197016-thumb-167xauto-3228.jpg"
     },
     {
       "name": "腸活サンド チキンandチーズ",
@@ -271,7 +285,8 @@
           "kcal": 678
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2021/11/chokatsu_item-thumb-167xauto-3860.jpg"
     },
     {
       "name": "スパイシーえびたま",
@@ -290,7 +305,8 @@
           "kcal": 642
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2021/03/spicy-thumb-167xauto-3713.jpg"
     },
     {
       "name": "贅沢てりたまチキン",
@@ -309,7 +325,8 @@
           "kcal": 898
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2022/03/teritama_item-thumb-167xauto-3930.jpg"
     },
     {
       "name": "よくばりハーフ＆ハーフ（ツナ/生ハム&マスカルポーネ）",
@@ -328,7 +345,8 @@
           "kcal": 668
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2022/03/half_item-thumb-167xauto-3931.jpg"
     },
     {
       "name": "ピザ ベーコンイタリアーナ",
@@ -341,7 +359,8 @@
           "kcal": 436
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2020/08/pizza_becon-thumb-167xauto-3607.jpg"
     },
     {
       "name": "ピザ えびジェノベーゼ",
@@ -354,7 +373,8 @@
           "kcal": 412
         }
       ],
-      "category": "sandwich"
+      "category": "sandwich",
+      "image": "https://www.subway.co.jp/assets_c/2022/01/Shrimp_genovese_item-thumb-167xauto-3898.jpg"
     }
   ],
   "FreeTopping": [
@@ -362,51 +382,60 @@
       "name": "ウィート",
       "link": "/menu/bread/2246.html",
       "size": [],
-      "category": "bread"
+      "category": "bread",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/2f6df76d8e06027d9d48832b73a6c1e6c784a588-thumb-167xauto-2602.jpg"
     },
     {
       "name": "ホワイト",
       "link": "/menu/bread/2245.html",
       "size": [],
-      "category": "bread"
+      "category": "bread",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/2a44e71abb8caee345701e9a270d6fb99ceaf687-thumb-167xauto-2598.jpg"
     },
     {
       "name": "セサミ",
       "link": "/menu/bread/2244.html",
       "size": [],
-      "category": "bread"
+      "category": "bread",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/5d96a6ee9b74e82288b3db856f87f4017f07617d-thumb-167xauto-2594.jpg"
     },
     {
       "name": "ハニーオーツ",
       "link": "/menu/bread/2243.html",
       "size": [],
-      "category": "bread"
+      "category": "bread",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/82f3c716f851da555dc23b5539688a87ea1099e6-thumb-167xauto-2590.jpg"
     },
     {
       "name": "フラットブレッド",
       "link": "/menu/bread/2242.html",
       "size": [],
-      "category": "bread"
+      "category": "bread",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/466ae2cb5a44d2641e1de374f7217899132da0da-thumb-167xauto-2586.jpg"
     },
     {
       "name": "レタス",
       "size": [],
-      "category": "vegetable"
+      "category": "vegetable",
+      "image": "https://www.subway.co.jp/menu/images/thumb_lettuce.png"
     },
     {
       "name": "トマト",
       "size": [],
-      "category": "vegetable"
+      "category": "vegetable",
+      "image": "https://www.subway.co.jp/menu/images/thumb_tomato.png"
     },
     {
       "name": "ピーマン",
       "size": [],
-      "category": "vegetable"
+      "category": "vegetable",
+      "image": "https://www.subway.co.jp/menu/images/thumb_green_pepper.png"
     },
     {
       "name": "オニオン",
       "size": [],
-      "category": "vegetable"
+      "category": "vegetable",
+      "image": "https://www.subway.co.jp/menu/images/thumb_onion.png"
     },
     {
       "name": "オリーブ",
@@ -430,55 +459,64 @@
       "name": "オイル&ビネガー　塩・こしょう",
       "link": "/menu/sauce/2263.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/1b9eea97c853f9fe0f691ff18b87e5aaf1366791-thumb-167xauto-2670.jpg"
     },
     {
       "name": "シーザードレッシング",
       "link": "/menu/sauce/2261.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/6744edae8779ba255284c3b1cbb5505ffd71a8d4-thumb-167xauto-2662.jpg"
     },
     {
       "name": "野菜クリーミードレッシング",
       "link": "/menu/sauce/2256.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/29158b865b2ade7c58931248c9910cd04bab7201-thumb-167xauto-2642.jpg"
     },
     {
       "name": "まろやかレモンドレッシング",
       "link": "/menu/sauce/2625.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2021/11/lemon_dre_item-thumb-167xauto-3866.jpg"
     },
     {
       "name": "わさび醤油ソース",
       "link": "/menu/sauce/2260.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2019/11/d4b2e04fbb50b0b849fa59dd9f930ce76d83abd7-thumb-167xauto-3356.jpg"
     },
     {
       "name": "バジルソース",
       "link": "/menu/sauce/2262.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/4cb0753376b8a20a12005812e87c9e1f02cac7e0-thumb-167xauto-2666.jpg"
     },
     {
       "name": "マヨネーズタイプ",
       "link": "/menu/sauce/2258.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/76c7a99556222bbd765533e40166e45505982f2c-thumb-167xauto-2650.jpg"
     },
     {
       "name": "チリソース（激辛）",
       "link": "/menu/sauce/2255.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2019/11/82ca5e2c83c623ecf9593575efa69bbce60556a7-thumb-167xauto-3354.jpg"
     },
     {
       "name": "チポトレソース",
       "link": "/menu/sauce/2563.html",
       "size": [],
-      "category": "sauce"
+      "category": "sauce",
+      "image": "https://www.subway.co.jp/assets_c/2021/03/59d01a340a4a39a1fce425bfdc3e715aeaabd67e-thumb-167xauto-3699.jpg"
     }
   ],
   "PaidTopping": [
@@ -493,7 +531,8 @@
           "kcal": 47
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2021/03/natural_cheese-thumb-167xauto-3701.jpg"
     },
     {
       "name": "クリームタイプチーズ",
@@ -506,7 +545,8 @@
           "kcal": 64
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/6e42c92fe577b5ba432b3819c04d947e8215afca-thumb-167xauto-2630.jpg"
     },
     {
       "name": "マスカルポーネチーズ",
@@ -519,7 +559,8 @@
           "kcal": 51
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/c8b454d68aa030f5839f434dbc5690736ab125bd-thumb-167xauto-2626.jpg"
     },
     {
       "name": "たまご",
@@ -532,7 +573,8 @@
           "kcal": 65
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/a89a9fcda6d436104d64f93c979199fd8828a416-thumb-167xauto-2614.jpg"
     },
     {
       "name": "ベーコン",
@@ -545,7 +587,8 @@
           "kcal": 48
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/334ccec9a83a7be13664e58caaa06e7b243ae4fd-thumb-167xauto-2606.jpg"
     },
     {
       "name": "ツナ",
@@ -558,7 +601,8 @@
           "kcal": 68
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/9df041009710fad87aa5bce1830f9f6388585d93-thumb-167xauto-2610.jpg"
     },
     {
       "name": "えび",
@@ -571,7 +615,8 @@
           "kcal": 16
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/4243fb700a68e7b36bc8e7a15bce255d72af2e3f-thumb-167xauto-2622.jpg"
     },
     {
       "name": "アボカド",
@@ -584,7 +629,8 @@
           "kcal": 74
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/3e58310c1fd39728ff3594f805719b1edffa40af-thumb-167xauto-2618.jpg"
     },
     {
       "name": "モッツァレラミックスチーズ",
@@ -597,7 +643,8 @@
           "kcal": 46
         }
       ],
-      "category": "topping"
+      "category": "topping",
+      "image": "https://www.subway.co.jp/assets_c/2018/05/0369e6cea4cda53f466931f3acfbba367dcc4970-thumb-167xauto-2420.jpg"
     }
   ],
   "PaidOptions": {
@@ -607,27 +654,32 @@
         {
           "name": "ポテトドリンクセット",
           "size": [],
-          "category": "setmenu"
+          "category": "setmenu",
+          "image": "https://www.subway.co.jp/menu/sandwich/images/setmenu01.png"
         },
         {
           "name": "ドリンク(S)セット",
           "size": [],
-          "category": "setmenu"
+          "category": "setmenu",
+          "image": "https://www.subway.co.jp/menu/sandwich/images/setmenu02.png"
         },
         {
           "name": "ポテト(S)セット",
           "size": [],
-          "category": "setmenu"
+          "category": "setmenu",
+          "image": "https://www.subway.co.jp/menu/sandwich/images/setmenu03.png"
         },
         {
           "name": "スープセット",
           "size": [],
-          "category": "setmenu"
+          "category": "setmenu",
+          "image": "https://www.subway.co.jp/menu/sandwich/images/setmenu04.png"
         },
         {
           "name": "フロートセット",
           "size": [],
-          "category": "setmenu"
+          "category": "setmenu",
+          "image": "https://www.subway.co.jp/menu/sandwich/images/setmenu05.png"
         }
       ]
     ],
@@ -638,6 +690,7 @@
           "link": "/menu/salad/2274.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/804d9d53e8c457932eb9fd02acd9164ad020f312-thumb-167xauto-3471.jpg",
           "price": 920,
           "carbohydrate": 5.5,
           "kcal": 144
@@ -647,6 +700,7 @@
           "link": "/menu/salad/2278.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/a42b7dfb707a6aed4a5843c24e520f28c2ba498c-thumb-167xauto-3479.jpg",
           "price": 860,
           "carbohydrate": 6,
           "kcal": 129
@@ -656,6 +710,7 @@
           "link": "/menu/salad/2276.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/e1b54b6c3ee0b8c09ad876b02cb9a934f67bff52-thumb-167xauto-3475.jpg",
           "price": 860,
           "carbohydrate": 7.5,
           "kcal": 123
@@ -665,6 +720,7 @@
           "link": "/menu/salad/2655.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2022/03/teriyaki_salad_item-thumb-167xauto-3932.jpeg",
           "price": 820,
           "carbohydrate": 14,
           "kcal": 177
@@ -674,6 +730,7 @@
           "link": "/menu/salad/2275.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/3f59bb99ed59380879ec1712e023111871aec9ed-thumb-167xauto-3473.jpg",
           "price": 760,
           "carbohydrate": 6,
           "kcal": 118
@@ -683,6 +740,7 @@
           "link": "/menu/salad/2623.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2021/11/sal_chicken_item-thumb-167xauto-3862.jpg",
           "price": 760,
           "carbohydrate": 5.5,
           "kcal": 93
@@ -692,6 +750,7 @@
           "link": "/menu/salad/2624.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2021/11/sal_cheese_chicken_item-thumb-167xauto-3864.jpg",
           "price": 820,
           "carbohydrate": 6.1,
           "kcal": 158
@@ -701,6 +760,7 @@
           "link": "/menu/salad/2268.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/a94ee2f0222a6b93e6d1ae27d8b2e6a51bb0334e-thumb-167xauto-3459.jpg",
           "price": 760,
           "carbohydrate": 7,
           "kcal": 169
@@ -710,6 +770,7 @@
           "link": "/menu/salad/2264.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/6e1726ab3cc7a2537678947e452f366ecf0cb6b3-thumb-167xauto-3453.jpg",
           "price": 760,
           "carbohydrate": 7.8,
           "kcal": 104
@@ -719,6 +780,7 @@
           "link": "/menu/salad/2271.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/942e4134b5ccedc6c602a0b358b1045e3946a45d-thumb-167xauto-3465.jpg",
           "price": 760,
           "carbohydrate": 7.5,
           "kcal": 107
@@ -728,6 +790,7 @@
           "link": "/menu/salad/2272.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/bfa6b4ccc5319d83c96455241412ef5b5395a1bd-thumb-167xauto-3467.jpg",
           "price": 760,
           "carbohydrate": 7.8,
           "kcal": 163
@@ -737,6 +800,7 @@
           "link": "/menu/salad/2270.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2020/03/c117b17034f27a973b689d7b11adcdae10cc16c0-thumb-167xauto-3463.jpg",
           "price": 690,
           "carbohydrate": 5.5,
           "kcal": 33
@@ -746,6 +810,7 @@
           "link": "/menu/salad/2658.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2022/03/ready-thumb-167xauto-3933.jpeg",
           "price": 860,
           "carbohydrate": 5.7,
           "kcal": 146
@@ -755,6 +820,7 @@
           "link": "/menu/salad/2565.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/0369e6cea4cda53f466931f3acfbba367dcc4970-thumb-167xauto-2420.jpg",
           "price": 820,
           "carbohydrate": 7,
           "kcal": 113
@@ -764,6 +830,7 @@
           "link": "/menu/salad/2656.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2022/03/ready-thumb-167xauto-3933.jpeg",
           "price": 920,
           "carbohydrate": 14.3,
           "kcal": 295
@@ -773,6 +840,7 @@
           "link": "/menu/salad/2657.html",
           "size": [],
           "category": "salad",
+          "image": "https://www.subway.co.jp/assets_c/2022/03/ready-thumb-167xauto-3933.jpeg",
           "price": 820,
           "carbohydrate": 9.3,
           "kcal": 165
@@ -802,7 +870,8 @@
               "kcal": 16
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/13e43b0ef600aa85b85a5bddc905ad18a8d0b6cb-thumb-306xauto-2462.jpg"
         },
         {
           "name": "アイスカフェオレ",
@@ -827,7 +896,8 @@
               "kcal": 133
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/6976355337e31af22760d580c5a4860035d1bd05-thumb-306xauto-2466.jpg"
         },
         {
           "name": "アイスココア",
@@ -840,7 +910,8 @@
               "kcal": 198
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/ad5edb8994e85f6314e7b3e13a0251e40bb9503a-thumb-306xauto-2502.jpg"
         },
         {
           "name": "アイスティー",
@@ -865,7 +936,8 @@
               "kcal": 10
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/a989ba4a01c030e4eea146f2ebc705e3c40bb260-thumb-306xauto-2470.jpg"
         },
         {
           "name": "アイスミルク",
@@ -890,7 +962,8 @@
               "kcal": 265
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/91c13311b550ae56fc11bbfdb65d08a1fa694f5d-thumb-306xauto-2482.jpg"
         },
         {
           "name": "野菜と果物のジュース",
@@ -915,7 +988,8 @@
               "kcal": 176
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/297e753e635e1b5ce839d563d62ba486e9c0ac44-thumb-306xauto-2458.jpg"
         },
         {
           "name": "オレンジジュース100%",
@@ -940,7 +1014,8 @@
               "kcal": 172
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/b2e5fdb497ba4644e930f9819bf6d9d3b6a8005d-thumb-306xauto-2478.jpg"
         },
         {
           "name": "アイスウーロン茶",
@@ -965,7 +1040,8 @@
               "kcal": 2
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/ee8dd98967f5ee3570183104c46d24aa66c03886-thumb-306xauto-2474.jpg"
         },
         {
           "name": "メロンソーダ",
@@ -990,7 +1066,8 @@
               "kcal": 148
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/80d88d2466a7e117e49c9bffe966974fd36f4ab2-thumb-306xauto-2494.jpg"
         },
         {
           "name": "ジンジャーエール",
@@ -1015,7 +1092,8 @@
               "kcal": 130
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/04625fc13961841dc71430b86637fa09778dcc88-thumb-306xauto-2498.jpg"
         },
         {
           "name": "ペプシコーラ",
@@ -1040,7 +1118,8 @@
               "kcal": 148
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/2a159a370ddeeb7204496d3dc25f6990a85e697e-thumb-306xauto-2486.jpg"
         },
         {
           "name": "ペプシゼロ",
@@ -1065,7 +1144,8 @@
               "kcal": null
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/3fd0dae64bd202f1cc92d138945d7ef9cf760d39-thumb-306xauto-2490.jpg"
         },
         {
           "name": "ホットコーヒー",
@@ -1084,7 +1164,8 @@
               "kcal": 7
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/49e45e191fc795f06904187e8e698dde753c60b7-thumb-306xauto-2506.jpg"
         },
         {
           "name": "ホットカフェラテ",
@@ -1103,7 +1184,8 @@
               "kcal": 69
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/67cc2bd96657b4e48e06f40f959a1fc8818534d5-thumb-306xauto-2526.jpg"
         },
         {
           "name": "ホットココア",
@@ -1116,7 +1198,8 @@
               "kcal": 150
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/a37881e05c1cd2ced5fad5668ef8cc8c1275c200-thumb-306xauto-2518.jpg"
         },
         {
           "name": "ホットティー",
@@ -1129,7 +1212,8 @@
               "kcal": 3
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/dcbcc28afea4707907cf07ad78e9b189fb4fa444-thumb-306xauto-2514.jpg"
         },
         {
           "name": "ホットミルクティー",
@@ -1142,7 +1226,8 @@
               "kcal": 23
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/9529b59c183c868d979c55961bde2a43d89cf154-thumb-306xauto-2522.jpg"
         },
         {
           "name": "ホットハーブティー",
@@ -1155,13 +1240,15 @@
               "kcal": 5
             }
           ],
-          "category": "drink"
+          "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/de2ce8630c542016058d8425a3d95d1a774b6bd5-thumb-306xauto-2510.jpg"
         },
         {
           "name": "コーヒーフロート",
           "link": "/menu/drink/ice_cream_floats/2209.html",
           "size": [],
           "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/3c1b39d727d8747f5868e4f4ef2bb8b6404d5391-thumb-167xauto-2454.jpg",
           "price": 300,
           "carbohydrate": null,
           "kcal": 93
@@ -1171,6 +1258,7 @@
           "link": "/menu/drink/ice_cream_floats/2208.html",
           "size": [],
           "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/08c7b986ff0db7748c4f25891f36f00d6e3208c6-thumb-167xauto-2450.jpg",
           "price": 300,
           "carbohydrate": null,
           "kcal": 151
@@ -1180,6 +1268,7 @@
           "link": "/menu/drink/ice_cream_floats/2206.html",
           "size": [],
           "category": "drink",
+          "image": "https://www.subway.co.jp/assets_c/2018/05/82e353304e7e8656933338ea57b245bbdfba36ea-thumb-167xauto-2442.jpg",
           "price": 300,
           "carbohydrate": null,
           "kcal": 172

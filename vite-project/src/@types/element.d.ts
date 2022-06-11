@@ -16,3 +16,14 @@ declare namespace JSX {
       marginSet:marginSetType
   }
 }
+const minDistance = 100;
+const maxValue = 1000;
+const minValue = 100;
+
+declare interface SlideBar {
+  minDistance : number,
+  maxValue : number,
+  minValue : number,
+  unitName ? : string
+}
+

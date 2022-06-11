@@ -9,21 +9,22 @@ import { useDispatch, useSelector } from 'react-redux';
 import {  updatePriceOptions } from '../../redux/searchOptions/action';
 import { RootStateType } from '../../redux/type';
 
-function valuetext(value: number) {
-  return `¥${value}`;
-}
+//type
+import { SlideBar } from '../../@types/element';
 
-// config initialize
-const minDistance = 100;
-const maxValue = 1000;
-const minValue = 100;
 
-export default function MinimumDistanceSlider() {
+export default function MinimumDistanceSlider(props:SlideBar) {
   const dispatch = useDispatch();
   const searchOptions = Object.assign([],useSelector((state:RootStateType) => state.searchOptions.PriceOption));
 
-  const [value, setValue] = React.useState<number[]>([searchOptions.min, searchOptions.max]);
+  const {minDistance , maxValue , minValue , unitName } = props;
+  const initializeValue = maxValue / 2;
+  const [value, setValue] = React.useState<number[]>([searchOptions.min, initializeValue]);
 
+
+  const valuetext = (n:number) => {
+    return `${unitName}${n}`
+  }
   const handleChange = (
     event: Event,
     newValue: number | number[],
@@ -51,13 +52,13 @@ export default function MinimumDistanceSlider() {
   return (
     <>
     <h2>希望価格の設定</h2>
+    <p>{valuetext(value[0])} 〜 {valuetext(value[1])}</p>
     <Box sx={{ width: 300 , margin: "auto"}}>
       <Slider
         getAriaLabel={() => 'Minimum distance'}
         value={value}
         onChange={handleChange}
         valueLabelDisplay="auto"
-        getAriaValueText={valuetext}
         disableSwap
         max = {maxValue}
         min = {minValue}

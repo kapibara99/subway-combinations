@@ -17,7 +17,12 @@ export const Home = () => {
     <main>
       <CheckList />
       <MarginSet value="large" />
-      <MinimumDistanceSlider />
+      <MinimumDistanceSlider
+        minDistance={100}
+        minValue = {100}
+        maxValue = {1000}
+        unitName = "¥"
+      />
       <MarginSet value="middle" />
       <Box textAlign='center'>
       <Button

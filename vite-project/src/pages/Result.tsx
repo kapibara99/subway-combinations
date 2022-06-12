@@ -1,5 +1,6 @@
 import React, { useState , useEffect } from 'react'
 
+// original
 import { ResultCard } from '../components/resultCard/resultCard';
 //redux
 import { useDispatch, useSelector } from 'react-redux';
@@ -23,9 +24,11 @@ export const Result = () => {
 
   return (
     <main>
-      {recommendMenu.length && recommendMenu.map( (data:Data,i:number) =>
-        <ResultCard key={i} name = {String(i)}  value = {data}/>
-      )}
+      <div className='c-cardList'>
+        {recommendMenu.length && recommendMenu.map( (data:Data,i:number) =>
+          <ResultCard key={i} name = {String(i)}  value = {data}/>
+        )}
+      </div>
       {!recommendMenu.length && <p>no data</p> }
     </main>
   )

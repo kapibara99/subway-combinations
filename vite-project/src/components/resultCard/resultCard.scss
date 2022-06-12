@@ -1,10 +1,16 @@
 @charset "UTF-8";
 
+.c-cardList{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  margin: 20px auto;
+}
 .c-card{
   $root : &;
   width: 100%;
   max-width: 330px;
-  margin:auto;
   padding: 12px 24px;
   box-shadow: 1px 1px 4px -1px #444;
 
@@ -13,12 +19,24 @@
       margin-bottom: 20px;
     }
   }
-  @include mq(){
+  @include mq(tablet){
+    &:nth-of-type(odd){
+      margin-right: 20px;
+    }
+    &:nth-of-type(n+3){
+      margin-top: 20px;
+    }
+  }
+  @include mq(pc-wrap){
     &:not(:last-of-type){
       margin-right: 30px;
     }
   }
-  &.-no-image{}
+  // &.-no-image{
+  //   #{$root}__imageWrap{
+  //     display: none;
+  //   }
+  // }
   &__imageWrap{
     position: relative;
     width: 100%;
@@ -40,6 +58,7 @@
   // elements
   &__title{
     text-align: center;
+    min-height: 2.5em;
   }
   &__props{
     display: flex;

@@ -22,10 +22,10 @@ $weak : #CDCDCD;
 
 // media query mixin
 $breakpoints: (
-  'sp': 'screen and (max-width: 599px)',
+  'sp': 'screen and (max-width: 768px)',
   'sp-mini': 'screen and (max-width: 359px)',
-  'pc': 'screen and (min-width: 600px)',
-  'tablet': 'screen and (min-width: 600px) and (max-width: 1024px)',
+  'pc': 'screen and (min-width: 769px)',
+  'tablet': 'screen and (min-width: 769px) and (max-width: 1024px)',
   'pc-wrap': 'screen and (min-width: 1024px)',
 ) !default;
 

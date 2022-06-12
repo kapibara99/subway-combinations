@@ -4,9 +4,7 @@
 
 ## TODO
 
-- バーに糖質/kcalを追加（）
 - 受け取った値を元にリザルトをソートするロジックを作る
-- ヘッダーにsns icon追加 / フッターに諸々追加
 - 注文方法コンポーネント / 規約コンポーネント / を仮ページに置く
   - 注文方法
     - キャラクター + コメントUI
@@ -19,7 +17,8 @@
 
 ここまでやって一度レビュー会
 - リザルト画面の意見をもらう
-
+- 揮毫の方法をデザイナーに聞く
+-
 ## 課題解決
 サブウェイ　難しい
 サブウェイ　注文　怖い
@@ -41,13 +40,3 @@ https://www.figma.com/file/077J1kN5chneLHBlGGS0EE/99-kapy's-team-library?node-id
   suger https://nukumori-icon.com/tag/%E7%A0%82%E7%B3%96/
     加工okのようなので、pngをsvgへ
   kcal https://icon-icons.com/ja/%E3%82%A2%E3%82%A4%E3%82%B3%E3%83%B3/%E6%9C%A8-%E7%81%AB/144657
-
-## フローチャート
-
-2 フロントデザイン / 実装
-- how to orderページは後回し
-
-- result UI(使わないかもしれないけど、modalで詳細を見れるように)
-- button UI
-- get data and draw result
--

@@ -17,20 +17,72 @@ export async function postData(url = '', data = {}) {
 }
 
 import { menuStringType } from "../../@types/element";
-export const editData = (type:menuStringType,origin:Data[]):Data[] => {
+export const editData = (type:menuStringType,origin:Data[],option:InitializeSearchOptions):Data[] => {
   const ary = Object.assign([],origin);
   let result:Data[] = [];
   switch (type){
     case "Sandwich":
     default :
       if(ary.length){
-        result = random(3,ary);
+        const sliderFiltered = slideFilter(option.SliderOptions,ary);
+        result = random(3,sliderFiltered);
       }
       break;
   }
   return result;
 }
 
+/*
+========================================
+edit data methods
+========================================
+*/
+
+//min max の値でfilterをかける
+/**
+ * @module    slideFilter
+ * @param {object} SliderOptions - same SliderOptions.XXX : slideBarValues
+ * @param {string} origin - 元の配列
+ * @return {string}   filter後の配列
+*/
+const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
+  let result:Data[] = origin;
+  Object.keys(SliderOptions).forEach((key)=>{
+    const option = SliderOptions[key];
+    switch (key){
+      case "PriceOption":
+        result = result.filter((data)=>{
+          const price = data.size[0] ? data.size[0].price : data.price;
+          if(price && price >= option.min && price <= option.max){
+            return data;
+          }
+        })
+        return result;
+      case "CarbohyOption":
+        result = result.filter((data)=>{
+          const carbohy = data.size[0] ? data.size[0].carbohydrate : data.carbohydrate;
+          if(carbohy && carbohy >= option.min && carbohy <= option.max){
+            return data;
+          }
+        })
+        return result;
+      case "KcalOption":
+        result = result.filter((data)=>{
+          const kcal = data.size[0] ? data.size[0].kcal : data.kcal;
+          if(kcal && kcal >= option.min && kcal <= option.max){
+            return data;
+          }
+        })
+        return result;
+      default:
+        return result;
+    }
+  })
+  return result;
+}
+
+//search Optionを取り込む
+const searchOptionFilter = () => {}
 /**
  * @module random
  * @param {number} sliceNumber - 何個返すか

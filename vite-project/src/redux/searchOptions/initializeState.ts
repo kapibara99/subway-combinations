@@ -23,12 +23,12 @@ const initialState:InitializeSearchOptions = {
       max:1000
     },
     CarbohyOption:{
-      min:300,
-      max:1000
+      min:0,
+      max:100
     },
     KcalOption:{
-      min:300,
-      max:1000
+      min:100,
+      max:2000
     },
   }
 }

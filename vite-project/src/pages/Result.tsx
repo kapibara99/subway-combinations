@@ -12,9 +12,8 @@ import { RootStateType } from '../redux/type';
 export const Result = () => {
   const dispatch = useDispatch();
   const selector:any = useSelector(state => state);
-  const options = selector.searchOptions.array;
-  const recommendMenu = editData("Sandwich",useSelector((state:RootStateType) => state.menuData.Sandwich));
-  console.log(recommendMenu,options);
+  const options = selector.searchOptions;
+  const recommendMenu = editData("Sandwich",useSelector((state:RootStateType) => state.menuData.Sandwich),options);
 
   useEffect(()=>{
     postData("../../data/output.json").then(data=>{

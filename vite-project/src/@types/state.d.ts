@@ -11,14 +11,19 @@ interface InitializeMenuData {
 }
 interface InitializeSearchOptions {
   SearchOption:SearchOption[],
-  PriceOption:PriceOption
+  SliderOptions : {
+    PriceOption:slideBarValues,
+    CarbohyOption:slideBarValues,
+    KcalOption:slideBarValues,
+  }
 }
-interface PriceOption {
+
+interface slideBarValues {
   min:number,
   max:number
 }
 interface SearchOption {
   name:string,
   key:string,
-  flag ?:boolean,
+  flag:boolean,
 }

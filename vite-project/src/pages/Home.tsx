@@ -63,15 +63,13 @@ export const Home = () => {
       </>
       <MarginSet value="middle" />
       <Box textAlign='center'>
-      <Button
-        variant="contained"
-        color="primary"
-        size="large"
-        component={Link}
-        to="/result"
-      >
-      提案
-    </Button>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          component={Link}
+          to="/result"
+        >提案</Button>
       </Box>
       <MarginSet value="middle" />
     </main>

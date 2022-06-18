@@ -1,4 +1,7 @@
-import React, { useState , useEffect } from 'react'
+import React, { useState , useEffect, useRef } from 'react'
+
+// mui
+import { Box , Button } from "@mui/material";
 
 // original
 import { ResultCard } from '../components/resultCard/resultCard';
@@ -14,32 +17,69 @@ import {postData , editData} from "../common/api/get";
 
 
 export const Result = () => {
+  //variable
   const dispatch = useDispatch();
-  const selector:any = useSelector(state => state);
-  const options = selector.searchOptions;
-  const recommendMenu = editData("Sandwich",useSelector((state:RootStateType) => state.menuData.Sandwich),options);
+  const options = useSelector((state:RootStateType) => state.searchOptions);
+  const resultData = useSelector((state:RootStateType) => state.menuData);
+  const getMenuData = () => {
+    return editData("Sandwich",resultData,options)
+  }
+  const [stateMenuData,setStateMenuData] = useState<Data[]>(getMenuData());
 
+  // handle methods
+  const updateMenuData = () => {
+    const data = [...getMenuData()];
+    setStateMenuData(data)
+  }
+  const clickHandler = () => {
+    updateMenuData();
+  }
+
+  // call api
   useEffect(()=>{
     postData("../../data/output.json").then(data=>{
       dispatch(updateDataAction(data));
     });
   },[])
+  //set data
+  useEffect(()=>{
+    if(stateMenuData.length === 0){
+      updateMenuData();
+    }else{
+      return;
+    }
+  },[resultData])//selectorが更新されたら、エレメントもアップデートする
 
+
+  // element
   return (
     <main>
       <MarginSet value="middle"/>
       <h1>
-        <span>サブウェイ</span>
-        <span>メニュー提案App</span>
+        <span>提案結果</span>
       </h1>
       <MarginSet value="middle"/>
 
       <div className='c-cardList'>
-        {recommendMenu.length && recommendMenu.map( (data:Data,i:number) =>
-          <ResultCard key={i} name = {String(i)}  value = {data}/>
-        )}
+        {stateMenuData.length > 0 && stateMenuData.map( (data:Data,i:number) => {
+          return (<ResultCard key={data.name} name = {String(i)}  value = {data}/> )
+        })}
       </div>
-      {!recommendMenu.length && <p>no data</p> }
+      {!stateMenuData.length && <p>no data</p> }
+      <MarginSet value="middle"/>
+
+      <Box textAlign='center'>
+        <Button
+          variant="contained"
+          color="primary"
+          size="large"
+          onClick={() => clickHandler()}
+          // component={Link}
+          // to="/result"
+        >再提案</Button>
+      </Box>
+
+
       <MarginSet value="middle"/>
     </main>
   )

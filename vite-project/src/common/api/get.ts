@@ -20,21 +20,22 @@ export async function postData(url = '', data = {}) {
   })
   return response.json(); // JSON のレスポンスをネイティブの JavaScript オブジェクトに解釈
 }
-export const editData = (type:menuStringType,origin:Data[],option:InitializeSearchOptions):Data[] => {
-  const ary = Object.assign([],origin);
+export const editData = (type:menuStringType,origin:InitializeMenuData,option:InitializeSearchOptions):Data[] => {
+  const ary = Object.assign([],origin.Sandwich);
   let result:Data[] = [];
   switch (type){
     case "Sandwich":
     default :
       if(ary.length){
-        const addSearchOptionsData = searchOptionFilter(option.SearchOption,ary);
+        const addSearchOptionsData = searchOptionFilter(option.SearchOption,ary,origin.PaidOptions);
+        // console.log("addSearchOptionsData",addSearchOptionsData);
         const sliderFiltered = slideFilter(option.SliderOptions,addSearchOptionsData);
-        console.log(sliderFiltered);
-
+        // console.log("sliderFiltered",sliderFiltered);
         result = random(3,sliderFiltered);
       }
       break;
   }
+  // console.log("result",result);
   return result;
 }
 
@@ -52,7 +53,6 @@ edit data methods
  * @return {string}   filter後の配列
 */
 const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
-  console.log("SliderOptions",SliderOptions);
 
   let result:Data[] = origin;
   Object.keys(SliderOptions).forEach((key)=>{
@@ -90,16 +90,15 @@ const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
 }
 
 //search Optionを取り込む
-const searchOptionFilter = (SearchOption:SearchOption[],origin:Data[]):Data[] => {
+const searchOptionFilter = (SearchOption:SearchOption[],origin:Data[],paidOptions:any):Data[] => {
   if(!SearchOption.length) return origin;//optionがなければ素通し
   const options = SearchOption.filter((v) => v.flag).map((v) => v.key);
   if(!options.length) return origin;
 
-  let result:Data[] = origin;
-  const reduxOptions = useSelector((state:RootStateType) => state.menuData.PaidOptions);//stateから paid optionsを持ってくる
+  let result:Data[] = origin.slice();
   options.forEach((key)=>{
-    if(reduxOptions[key]){
-      result = [...result,...reduxOptions[key]]
+    if(paidOptions[key]){
+      result = [...result,...paidOptions[key]]
     }
   })
   // console.log("options",result,options,reduxOptions);

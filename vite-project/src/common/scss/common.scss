@@ -23,11 +23,7 @@ $minHeight : 40px;
   $header:&;
   background-color: $mainGreen;
   min-height: $minHeight;
-  margin-bottom: 100px;
   color: $white;
-  @include mq(){
-    margin-bottom: 150px;
-  }
   &__inner{
     display: flex;
     align-items: center;
@@ -86,5 +82,11 @@ $minHeight : 40px;
   &__copy{
     text-align: center;
     font-size: 14px;
+  }
+}
+
+h1,h2,h3,h4,h5,h6{
+  @include mq(){
+    text-align: center;
   }
 }

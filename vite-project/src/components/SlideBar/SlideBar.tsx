@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { SlideBar } from '../../@types/element';
 
 export default function MinimumDistanceSlider(props:SlideBar) {
-  const {minDistance , maxValue , minValue , unitName , dispatcher } = props;
+  const {minDistance , maxValue , minValue , unitName , dispatcher , heading } = props;
   const dispatch = useDispatch();
 
   const initializeValue = maxValue / 2;
@@ -45,7 +45,8 @@ export default function MinimumDistanceSlider(props:SlideBar) {
 
   return (
     <>
-    <p>{valuetext(value[0])} 〜 {valuetext(value[1])}</p>
+    {heading && <h3>{heading}</h3>}
+    <p style={{textAlign:"center"}}>{valuetext(value[0])} 〜 {valuetext(value[1])}</p>
     <Box sx={{ width: 300 , margin: "auto"}}>
       <Slider
         getAriaLabel={() => 'Minimum distance'}

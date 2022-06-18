@@ -24,6 +24,7 @@ export const editData = (type:menuStringType,origin:Data[],option:InitializeSear
     case "Sandwich":
     default :
       if(ary.length){
+        const test = searchOptionFilter(option.SearchOption,ary);
         const sliderFiltered = slideFilter(option.SliderOptions,ary);
         result = random(3,sliderFiltered);
       }
@@ -82,7 +83,12 @@ const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
 }
 
 //search Optionを取り込む
-const searchOptionFilter = () => {}
+const searchOptionFilter = (SearchOption:SearchOption[],origin:Data[]):Data[] => {
+  const result = origin;
+  console.log(SearchOption);
+
+  return result;
+}
 /**
  * @module random
  * @param {number} sliceNumber - 何個返すか

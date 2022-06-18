@@ -112,6 +112,19 @@ const priceTemplate = {
   carbohydrate : 0,
   kcal : 0,
 }
+    //もし空なら正規表現で探してみる
+    function setInfo(element,object,cheerioLoaded){
+      if(!object.price){
+        object.price = Number(String(String(cheerioLoaded(element).text()).match(/[\¥|\¥|\￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+      }
+      if(!object.carbohydrate){
+        object.carbohydrate = Number(String(String(cheerioLoaded(element).text()).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+      }
+      if(!object.kcal){
+        object.kcal = Number(String(String(cheerioLoaded(element).text()).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
+      }
+    }
+
 const setItemInfo = (element,resultAry,name) => {
   const temp = Object.assign({},parentTemplate);
   const $ = cheerio.load(element);
@@ -136,23 +149,12 @@ const setItemInfo = (element,resultAry,name) => {
     obj.carbohydrate = Number($$(".price_carb").text().replace("g","").replace("糖質 ",""));
     obj.kcal = Number($$(".price_kcal").text().replace("kcal",""));
 
-    //もし空なら正規表現で探してみる
-    function setInfo(element,object){
-      if(!object.price){
-        object.price = Number(String(String($$(element).text()).match(/[\¥|\¥|\￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
-      }
-      if(!object.carbohydrate){
-        object.carbohydrate = Number(String(String($$(element).text()).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
-      }
-      if(!object.kcal){
-        object.kcal = Number(String(String($$(element).text()).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
-      }
-    }
+
     const moreSearchEl = Array.from($$(".descBox"));
     moreSearchEl.forEach((el)=>{
-      setInfo(el,obj);
+      setInfo(el,obj,$$);
     })
-    setInfo($$,obj);
+    setInfo(el,obj,$$);
     if(obj.name !== "" &&( obj.price || obj.carbohydrate || obj.kcal )){
       temp.size.push(obj);
     }else if(obj.price || obj.carbohydrate || obj.kcal){
@@ -161,6 +163,14 @@ const setItemInfo = (element,resultAry,name) => {
       temp.kcal = obj.kcal
     }
   })
+  if(temp.size.length){
+    const {price,carbohydrate,kcal} = temp.size[0];//最初のサイズをpriceとする
+    temp.price = price
+    temp.carbohydrate = carbohydrate
+    temp.kcal = kcal
+  }else{
+    setInfo(element,temp,$)
+  }
   resultAry.push(temp);
 }
 const parseItem = (resultObj) => {

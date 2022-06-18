@@ -68,14 +68,22 @@ const replaceKeys = (data) => {
               result[parentKey][optionKey] = [];
             }
             const optionNames = parentDataList[parentKey][optionKey];
-            if(optionNames.includes(key)){
-              result[parentKey][optionKey].push(data[key].output);
+            if(optionNames.includes(key) && data[key].output){
+              if(Array.isArray(data[key].output)){
+                data[key].output.forEach((v)=>{
+                  result[parentKey][optionKey].push(v);
+                })
+              }else{
+                result[parentKey][optionKey].push(data[key].output);
+              }
             }
           })
         }else{
           if(parentDataList[parentKey].includes(key)){
             data[key]["output"].forEach((d)=>{
-              result[parentKey].push(d);
+              if(d){
+                result[parentKey].push(d);
+              }
             })
           }
         }

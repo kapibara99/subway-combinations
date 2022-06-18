@@ -212,7 +212,8 @@ const toJSON = (toJSONObj) => {
   const { decycle } = require('json-cyclic');
 
   fs.writeFile(resultPath,JSON.stringify(decycle(fin),null,2),
-  (err) =>{ if(err) console.log(`error!::${err}`)});
+    (err) =>{ if(err) console.log(`error!::${err}`)}
+  );
 }
 
 const parseData = () => {

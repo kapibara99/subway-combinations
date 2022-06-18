@@ -1,3 +1,8 @@
+import { useSelector } from "react-redux";
+import { menuStringType } from "../../@types/element";
+import { RootStateType } from "../../redux/type";
+
+
 export async function postData(url = '', data = {}) {
   // 既定のオプションには * が付いています
   const response = await fetch(url, {
@@ -15,10 +20,6 @@ export async function postData(url = '', data = {}) {
   })
   return response.json(); // JSON のレスポンスをネイティブの JavaScript オブジェクトに解釈
 }
-
-import { useSelector } from "react-redux";
-import { menuStringType } from "../../@types/element";
-import { RootStateType } from "../../redux/type";
 export const editData = (type:menuStringType,origin:Data[],option:InitializeSearchOptions):Data[] => {
   const ary = Object.assign([],origin);
   let result:Data[] = [];
@@ -26,8 +27,10 @@ export const editData = (type:menuStringType,origin:Data[],option:InitializeSear
     case "Sandwich":
     default :
       if(ary.length){
-        const test = searchOptionFilter(option.SearchOption,ary);
-        const sliderFiltered = slideFilter(option.SliderOptions,ary);
+        const addSearchOptionsData = searchOptionFilter(option.SearchOption,ary);
+        const sliderFiltered = slideFilter(option.SliderOptions,addSearchOptionsData);
+        console.log(sliderFiltered);
+
         result = random(3,sliderFiltered);
       }
       break;
@@ -49,6 +52,8 @@ edit data methods
  * @return {string}   filter後の配列
 */
 const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
+  console.log("SliderOptions",SliderOptions);
+
   let result:Data[] = origin;
   Object.keys(SliderOptions).forEach((key)=>{
     const option = SliderOptions[key];
@@ -86,17 +91,18 @@ const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
 
 //search Optionを取り込む
 const searchOptionFilter = (SearchOption:SearchOption[],origin:Data[]):Data[] => {
-  let result:Data[] = origin;
+  if(!SearchOption.length) return origin;//optionがなければ素通し
   const options = SearchOption.filter((v) => v.flag).map((v) => v.key);
-  const reduxOptions = useSelector((state:RootStateType) => state.menuData.PaidOptions);
+  if(!options.length) return origin;
+
+  let result:Data[] = origin;
+  const reduxOptions = useSelector((state:RootStateType) => state.menuData.PaidOptions);//stateから paid optionsを持ってくる
   options.forEach((key)=>{
     if(reduxOptions[key]){
       result = [...result,...reduxOptions[key]]
     }
   })
-
-
-  console.log("options",result,options,reduxOptions);
+  // console.log("options",result,options,reduxOptions);
   return result;
 }
 /**

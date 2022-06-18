@@ -25,8 +25,8 @@ export const Home = () => {
         <span>メニュー提案App</span>
       </h1>
       <MarginSet value="middle" />
-      <CheckList />
-      <MarginSet value="middle" />
+      {/* <CheckList />
+      <MarginSet value="middle" /> */}
       <h2>設定</h2>
       <>
         <MinimumDistanceSlider

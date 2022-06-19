@@ -112,6 +112,19 @@ const priceTemplate = {
   carbohydrate : 0,
   kcal : 0,
 }
+    //もし空なら正規表現で探してみる
+    function setInfo(element,object,cheerioLoaded){
+      if(!object.price){
+        object.price = Number(String(String(cheerioLoaded(element).text()).match(/[\¥|\¥|\￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
+      }
+      if(!object.carbohydrate){
+        object.carbohydrate = Number(String(String(cheerioLoaded(element).text()).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
+      }
+      if(!object.kcal){
+        object.kcal = Number(String(String(cheerioLoaded(element).text()).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
+      }
+    }
+
 const setItemInfo = (element,resultAry,name) => {
   const temp = Object.assign({},parentTemplate);
   const $ = cheerio.load(element);
@@ -136,23 +149,12 @@ const setItemInfo = (element,resultAry,name) => {
     obj.carbohydrate = Number($$(".price_carb").text().replace("g","").replace("糖質 ",""));
     obj.kcal = Number($$(".price_kcal").text().replace("kcal",""));
 
-    //もし空なら正規表現で探してみる
-    function setInfo(element,object){
-      if(!object.price){
-        object.price = Number(String(String($$(element).text()).match(/[\¥|\¥|\￥][0-9]*[0-9]/)).replace("￥","").replace("¥",""));
-      }
-      if(!object.carbohydrate){
-        object.carbohydrate = Number(String(String($$(element).text()).match(/糖質 [0-9.]*[0-9]/)).replace("g","").replace("糖質 ",""));
-      }
-      if(!object.kcal){
-        object.kcal = Number(String(String($$(element).text()).match(/[0-9]*[0-9]kcal/)).replace("kcal",""));
-      }
-    }
+
     const moreSearchEl = Array.from($$(".descBox"));
     moreSearchEl.forEach((el)=>{
-      setInfo(el,obj);
+      setInfo(el,obj,$$);
     })
-    setInfo($$,obj);
+    setInfo(el,obj,$$);
     if(obj.name !== "" &&( obj.price || obj.carbohydrate || obj.kcal )){
       temp.size.push(obj);
     }else if(obj.price || obj.carbohydrate || obj.kcal){
@@ -161,6 +163,14 @@ const setItemInfo = (element,resultAry,name) => {
       temp.kcal = obj.kcal
     }
   })
+  if(temp.size.length){
+    const {price,carbohydrate,kcal} = temp.size[0];//最初のサイズをpriceとする
+    temp.price = price
+    temp.carbohydrate = carbohydrate
+    temp.kcal = kcal
+  }else{
+    setInfo(element,temp,$)
+  }
   resultAry.push(temp);
 }
 const parseItem = (resultObj) => {
@@ -190,10 +200,48 @@ const parseItem = (resultObj) => {
   delete resultObj.ary;
 }
 
+const setMostMinMax = (data) => {
+  const obj =  Object.assign({});
+  Object.keys(data).forEach((key)=>{
+    if(typeof(obj[key]) !== "object"){
+      obj[key] = Object.assign({});
+    }
+    // console.log(obj);
+
+
+    if(Array.isArray(data[key])){
+      setting(data[key],key,"price",obj);
+      setting(data[key],key,"carbohydrate",obj);
+      setting(data[key],key,"kcal",obj);
+    }else{
+      Object.keys(data[key]).forEach((key2) => {
+        if(typeof(obj[key2]) !== "object"){
+          obj[key2] = Object.assign({});
+          if(obj[key]){
+            delete obj[key];
+          }
+        }
+        setting(data[key][key2],key2,"price",obj);
+        setting(data[key][key2],key2,"carbohydrate",obj);
+        setting(data[key][key2],key2,"kcal",obj);
+      })
+    }
+  })
+  data.MinMax = Object.assign({},obj);
+
+  function setting(array,keyName,valueName,obj){
+    if(!array.length) return;
+    const checkAry = array.slice().filter((v) => Number(v[valueName])).map((v)=>v[valueName]);
+    obj[keyName][valueName + "-min"] = Math.min(...checkAry) || null;
+    obj[keyName][valueName + "-max"] = Math.max(...checkAry) || null;
+  }
+
+  return data;
+}
 const toJSON = (toJSONObj) => {
   //toJSONObjをjsonにして、リソースを更新する
   let output = Object.assign({});
-
+  let fin = Object.assign({})
   const keys = Object.keys(toJSONObj);
   keys.forEach(k => {
     const list = Object.keys(toJSONObj[k].result);
@@ -204,7 +252,8 @@ const toJSON = (toJSONObj) => {
     })
   })
   const {replaceKeys} = require("./data");
-  const fin = replaceKeys(output);
+  fin = replaceKeys(output);
+  fin = setMostMinMax(fin);
 
   //remove element
   //convert

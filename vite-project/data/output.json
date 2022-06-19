@@ -1577,5 +1577,48 @@
       }
     ],
     "StoreOriginal": []
+  },
+  "MinMax": {
+    "Sandwich": {
+      "price-min": 360,
+      "price-max": 590,
+      "carbohydrate-min": 34.8,
+      "carbohydrate-max": 43.7,
+      "kcal-min": 215,
+      "kcal-max": 449
+    },
+    "FreeTopping": {
+      "price-min": null,
+      "price-max": null,
+      "carbohydrate-min": null,
+      "carbohydrate-max": null,
+      "kcal-min": 3,
+      "kcal-max": 227
+    },
+    "PaidTopping": {
+      "price-min": 50,
+      "price-max": 150,
+      "carbohydrate-min": null,
+      "carbohydrate-max": null,
+      "kcal-min": 16,
+      "kcal-max": 74
+    },
+    "SetMenu": {
+      "price-min": 170,
+      "price-max": 330,
+      "carbohydrate-min": null,
+      "carbohydrate-max": null,
+      "kcal-min": null,
+      "kcal-max": null
+    },
+    "SideMenu": {
+      "price-min": 240,
+      "price-max": 920,
+      "carbohydrate-min": 5.5,
+      "carbohydrate-max": 14.3,
+      "kcal-min": 1,
+      "kcal-max": 2400
+    },
+    "StoreOriginal": {}
   }
 }

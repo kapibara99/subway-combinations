@@ -200,10 +200,48 @@ const parseItem = (resultObj) => {
   delete resultObj.ary;
 }
 
+const setMostMinMax = (data) => {
+  const obj =  Object.assign({});
+  Object.keys(data).forEach((key)=>{
+    if(typeof(obj[key]) !== "object"){
+      obj[key] = Object.assign({});
+    }
+    // console.log(obj);
+
+
+    if(Array.isArray(data[key])){
+      setting(data[key],key,"price",obj);
+      setting(data[key],key,"carbohydrate",obj);
+      setting(data[key],key,"kcal",obj);
+    }else{
+      Object.keys(data[key]).forEach((key2) => {
+        if(typeof(obj[key2]) !== "object"){
+          obj[key2] = Object.assign({});
+          if(obj[key]){
+            delete obj[key];
+          }
+        }
+        setting(data[key][key2],key2,"price",obj);
+        setting(data[key][key2],key2,"carbohydrate",obj);
+        setting(data[key][key2],key2,"kcal",obj);
+      })
+    }
+  })
+  data.MinMax = Object.assign({},obj);
+
+  function setting(array,keyName,valueName,obj){
+    if(!array.length) return;
+    const checkAry = array.slice().filter((v) => Number(v[valueName])).map((v)=>v[valueName]);
+    obj[keyName][valueName + "-min"] = Math.min(...checkAry) || null;
+    obj[keyName][valueName + "-max"] = Math.max(...checkAry) || null;
+  }
+
+  return data;
+}
 const toJSON = (toJSONObj) => {
   //toJSONObjをjsonにして、リソースを更新する
   let output = Object.assign({});
-
+  let fin = Object.assign({})
   const keys = Object.keys(toJSONObj);
   keys.forEach(k => {
     const list = Object.keys(toJSONObj[k].result);
@@ -214,7 +252,8 @@ const toJSON = (toJSONObj) => {
     })
   })
   const {replaceKeys} = require("./data");
-  const fin = replaceKeys(output);
+  fin = replaceKeys(output);
+  fin = setMostMinMax(fin);
 
   //remove element
   //convert

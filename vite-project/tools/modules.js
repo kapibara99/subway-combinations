@@ -257,7 +257,7 @@ const toJSON = (toJSONObj) => {
 
   //remove element
   //convert
-  const resultPath = "data/output.json"
+  const resultPath = "public/data/output.json"
   const { decycle } = require('json-cyclic');
 
   fs.writeFile(resultPath,JSON.stringify(decycle(fin),null,2),

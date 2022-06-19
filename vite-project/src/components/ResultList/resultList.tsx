@@ -37,7 +37,7 @@ const ResultList = () => {
 
   // call api
   useEffect(()=>{
-    postData("data/output.json").then(data=>{
+    postData("/data/output.json").then(data=>{
       dispatch(updateDataAction(data));
     });
   },[])

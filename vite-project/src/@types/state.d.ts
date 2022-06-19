@@ -11,11 +11,13 @@ interface InitializeMenuData {
 }
 interface InitializeSearchOptions {
   SearchOption:SearchOption[],
-  SliderOptions : {
-    PriceOption:slideBarValues,
-    CarbohyOption:slideBarValues,
-    KcalOption:slideBarValues,
-  }
+  SliderOptions : InitializeSliderOptions
+}
+interface InitializeSliderOptions {
+  [key: string]:any,
+  PriceOption:slideBarValues,
+  CarbohyOption:slideBarValues,
+  KcalOption:slideBarValues,
 }
 
 interface slideBarValues {

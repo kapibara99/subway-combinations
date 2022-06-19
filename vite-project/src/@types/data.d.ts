@@ -1,7 +1,7 @@
 declare type Data = {
   name: string,
   link: string,
-  size ?: Size[],
+  size : Size[],
   category ?: string,
   image ?: string,
   price ?: number,

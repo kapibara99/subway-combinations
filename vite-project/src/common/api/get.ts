@@ -1,6 +1,4 @@
-import { useSelector } from "react-redux";
 import { menuStringType } from "../../@types/element";
-import { RootStateType } from "../../redux/type";
 
 
 export async function postData(url = '', data = {}) {
@@ -52,7 +50,7 @@ edit data methods
  * @param {string} origin - 元の配列
  * @return {string}   filter後の配列
 */
-const slideFilter = (SliderOptions:object,origin:Data[]):Data[] => {
+const slideFilter = (SliderOptions:InitializeSliderOptions,origin:Data[]):Data[] => {
 
   let result:Data[] = origin;
   Object.keys(SliderOptions).forEach((key)=>{

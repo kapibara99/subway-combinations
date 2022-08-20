@@ -19,8 +19,8 @@ const initialState:InitializeSearchOptions = {
   ],
   SliderOptions : {
     PriceOption:{
-      min:0,
-      max:1000
+      min:400,
+      max:600
     },
     CarbohyOption:{
       min:0,

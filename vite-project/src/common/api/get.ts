@@ -61,7 +61,9 @@ const slideFilter = (SliderOptions:InitializeSliderOptions,origin:Data[]):Data[]
       case "PriceOption":
         result = result.filter((data)=>{
           const price = data.size[0] ? data.size[0].price : data.price;
-          if(price && price >= option.min && price <= option.max){
+          if(
+            (price === undefined)
+            || (price && price >= option.min && price <= option.max)){
             return data;
           }
         })
@@ -69,7 +71,9 @@ const slideFilter = (SliderOptions:InitializeSliderOptions,origin:Data[]):Data[]
       case "CarbohyOption":
         result = result.filter((data)=>{
           const carbohy = data.size[0] ? data.size[0].carbohydrate : data.carbohydrate;
-          if(carbohy && carbohy >= option.min && carbohy <= option.max){
+          if(
+            (carbohy === undefined)
+            || (carbohy && carbohy >= option.min && carbohy <= option.max)){
             return data;
           }
         })
@@ -77,7 +81,9 @@ const slideFilter = (SliderOptions:InitializeSliderOptions,origin:Data[]):Data[]
       case "KcalOption":
         result = result.filter((data)=>{
           const kcal = data.size[0] ? data.size[0].kcal : data.kcal;
-          if(kcal && kcal >= option.min && kcal <= option.max){
+          if(
+            (kcal === undefined)
+            || (kcal && kcal >= option.min && kcal <= option.max)){
             return data;
           }
         })

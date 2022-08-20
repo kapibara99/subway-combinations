@@ -15,9 +15,13 @@ import { MarginSet } from '../components/usuallyMargin/MarginSet';
 
 // redux
 import { updatePriceOptions , updateCarbohyOptions ,  updateKcalOptions } from '../redux/searchOptions/action';
+import { useSelector } from 'react-redux';
+import { RootStateType } from '../redux/type';
 
 export const Home = () => {
-    return (
+  const [options,setOptions] = useState<InitializeSliderOptions>(useSelector((state:RootStateType) => state.searchOptions.SliderOptions));
+
+  return (
     <main>
       <MarginSet value="middle" />
       <h1>
@@ -34,6 +38,7 @@ export const Home = () => {
           unitName = "¥"
           minValue={100}
           maxValue={1000}
+          currentValue = {options.PriceOption}
           heading="価格"
           dispatcher = {updatePriceOptions}
           />
@@ -41,10 +46,11 @@ export const Home = () => {
       </>
       <>
         <MinimumDistanceSlider
-          minDistance={100}
+          minDistance={1}
           unitName = ""
-          minValue={500}
-          maxValue={2000}
+          minValue={0}
+          maxValue={200}
+          currentValue = {options.CarbohyOption}
           heading="糖質"
           dispatcher = {updateCarbohyOptions}
           />
@@ -56,6 +62,7 @@ export const Home = () => {
           unitName = ""
           minValue={500}
           maxValue={2000}
+          currentValue = {options.KcalOption}
           heading="カロリー"
           dispatcher = {updateKcalOptions}
           />

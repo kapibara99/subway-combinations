@@ -24,6 +24,7 @@ declare interface SlideBar {
   minDistance : number,
   maxValue : number,
   minValue : number,
+  currentValue : slideBarValues,
   unitName ? : string,
   heading ? : string,
   dispatcher : Function

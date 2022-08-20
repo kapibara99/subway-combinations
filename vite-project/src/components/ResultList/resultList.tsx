@@ -19,9 +19,11 @@ import {postData , editData} from "../../common/api/get";
 const ResultList = () => {
     //variable
   const dispatch = useDispatch();
-  const options = useSelector((state:RootStateType) => state.searchOptions);
+  const [options,setOptions] = useState(useSelector((state:RootStateType) => state.searchOptions));
+
   const resultData = useSelector((state:RootStateType) => state.menuData);
   const getMenuData = () => {
+    // console.log("resultData",resultData,options);
     return editData("Sandwich",resultData,options)
   }
   const [stateMenuData,setStateMenuData] = useState<Data[]>(getMenuData());

@@ -87,7 +87,8 @@
       margin:0 auto 0.5em;
     }
     &.-price::before{
-      background-image: url(#{$icons}/icon-bread.svg);
+      // background-image: url(#{$icons}/icon-bread.svg);
+      background-image: url(../../../public/resources/images/icon/icon-bread.svg);
     }
     &.-carbohydrate::before{
       background-image: url(#{$icons}/icon-sugar.svg);

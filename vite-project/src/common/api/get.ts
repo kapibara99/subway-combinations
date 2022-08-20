@@ -1,18 +1,19 @@
 import { menuStringType } from "../../@types/element";
 
+// import fetch from "node-fetch";
 
-export async function postData(url = '', data = {}) {
+export async function postData(url = '', data = {}):Promise<any> {
   // 既定のオプションには * が付いています
   const response = await fetch(url, {
-    method: 'POST', // *GET, POST, PUT, DELETE, etc.
+    method: 'GET', // *GET, POST, PUT, DELETE, etc.
     // accept:'text\/html,application\/xhtml+xml,application\/xml;q=0.9,image\/avif,image\/webp,image\/apng,\*\/\*;q=0.8,application\/signed-exchange;v=b3;q=0.9',
     // mode: 'cors', // no-cors, *cors, same-origin
     // cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
     // credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
+    // headers: {
+    //   // 'Content-Type': 'application/json'
+    //   // 'Content-Type': 'application/x-www-form-urlencoded',
+    // },
     // redirect: 'follow', // manual, *follow, error
     // referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
     // body: JSON.stringify(data) // 本文のデータ型は "Content-Type" ヘッダーと一致させる必要があります

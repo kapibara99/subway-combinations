@@ -1,6 +1,23 @@
 {
   "Sandwich": [
     {
+      "name": "チリコンカン＆チキン　〜チポトレ＋ハバネロソース(別添)〜",
+      "link": "/menu/sandwich/limited_sandwich/2686.html",
+      "size": [
+        {
+          "name": "レギュラー",
+          "price": 490,
+          "carbohydrate": 40.2,
+          "kcal": 305
+        }
+      ],
+      "category": "limited",
+      "image": "https://www.subway.co.jp/assets_c/2022/07/chiliconcarne_item-thumb-306xauto-4011.jpg",
+      "price": 490,
+      "carbohydrate": 40.2,
+      "kcal": 305
+    },
+    {
       "name": "メキシカンミートタコス　～情熱のチポトレ～",
       "link": "/menu/sandwich/limited_sandwich/2678.html",
       "size": [
@@ -1060,7 +1077,7 @@
         "link": "/menu/salad/2658.html",
         "size": [],
         "category": "salad",
-        "image": "https://www.subway.co.jp/assets_c/2022/03/ready-thumb-167xauto-3933.jpeg",
+        "image": "https://www.subway.co.jp/assets_c/2022/06/sl_chokatsu_item-thumb-167xauto-3994.jpg",
         "price": 860,
         "carbohydrate": 5.7,
         "kcal": 146
@@ -1070,7 +1087,7 @@
         "link": "/menu/salad/2565.html",
         "size": [],
         "category": "salad",
-        "image": "https://www.subway.co.jp/assets_c/2018/05/0369e6cea4cda53f466931f3acfbba367dcc4970-thumb-167xauto-2420.jpg",
+        "image": "https://www.subway.co.jp/assets_c/2022/06/sl_ses_item-thumb-167xauto-3993.jpg",
         "price": 820,
         "carbohydrate": 7,
         "kcal": 113

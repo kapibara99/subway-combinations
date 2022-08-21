@@ -1,10 +1,11 @@
 {
-  "name": "vite-project",
+  "name": "subway combinations",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:all":"run-s data:build build",
     "preview": "vite preview",
     "data:get": "node ./tools/scraping",
     "data:update": "node ./tools/update",
